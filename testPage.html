@@ -2,28 +2,28 @@
 
 <html>
 	<head>
-		<style type="text/css">
-			
-			ul{
-				border: 1px solid red;
-				list-style-type:none;
-				padding:0;
-			}
-			
-		</style>
+		
 	</head>
 
 	<body>
+		<SCRIPT Language="JavaScript">
 		
-		<div style="clear:both"><a href=""><img src="http://gpacalculator.net/high-school-gpa-calculator/" title="High School GPA Calculator" alt="High School GPA Calculator" border="0" /></a></div><div>Courtesy of: <a href="http://gpacalculator.net">GPAcalculator.net</a></div>
+		document.write('<table border="1" cellspacing="1" cellpadding="5">')
 		
-		<ul>
-			<li>apple</li>
-			<li>pie</li>
-			<li>dumplings</li>
-			<li>apple</li>
-			<li>twart</li>
-		</ul>
+		for(i = 0;i <= 1000; i++)
+		{	
+			document.write('<tr>')
 		
+			for(j = 0;j <= 1000; j++)
+			{	
+				document.write('<td>' + (j + i) + '</td>')
+			}
+			
+			document.write('</tr>')
+		}
+		
+		document.write('</table>')
+		
+		</script>
 	</body>
 </html>
