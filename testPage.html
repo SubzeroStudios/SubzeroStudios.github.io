@@ -8,21 +8,32 @@
 	<body>
 		<SCRIPT Language="JavaScript">
 		
-		document.write('<table border="1" cellspacing="1" cellpadding="5">')
-		
-		for(i = 0;i <= 1000; i++)
-		{	
-			document.write('<tr>')
-		
-			for(j = 0;j <= 1000; j++)
+		var person = prompt("please enter a number", "your number here");
+		if (person != null) 
+		{
+			document.write(person+'<h1>')
+			
+			document.write('<table border="1" cellspacing="0" cellpadding="5">')
+			
+			for(i = 0;i <= 9; i++)
 			{	
-				document.write('<td>' + (j + i) + '</td>')
+				document.write('<tr>')
+			
+				for(j = 0;j <= 9; j++)
+				{	
+					if((j + i) <= 9)
+					{
+						a = (j + i)
+					}
+				
+					document.write('<td BGCOLOR="#000'+a+''+a+'0"></td>')
+				}
+				
+				document.write('</tr>')
 			}
 			
-			document.write('</tr>')
+			document.write('</table>')
 		}
-		
-		document.write('</table>')
 		
 		</script>
 	</body>
