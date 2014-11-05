@@ -1,0 +1,253 @@
+*
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+body
+{
+	background-color: #7AE9FF;
+}
+
+body, section, aside, nav, hgroup, header, footer
+{
+	display: block;
+}
+
+#title
+{
+	font: bold 30px Georgia;
+	color: black;
+}
+
+#main_section #homeIntro
+{
+	padding: 10px;
+	text-align: left;
+	font: 24px Georgia;
+	color: black;
+}
+
+#big_wrapper
+{
+	text-align: center;
+	
+}
+
+#top_header 
+{
+	background: -webkit-linear-gradient(right, #EDEDED, white);
+	margin-top: 10px;
+	margin-left: 40px;
+	margin-right: 40px;
+	padding: 15px;
+	border: 2px solid black;
+	-webkit-box-flex: 1;
+	-webkit-box-align: stretch;
+	-webkit-box-shadow: rgb(110, 110, 110) 10px 10px 10px ;
+	font: Bold 20px AR BLANCA;
+}
+
+#menu
+{
+	
+	width: 250px;
+}
+
+/* Styling For Text Inside Nav Bar Boxes */
+nav ul li a
+{
+	
+	display: block;
+	text-decoration: none;
+	font: bold 45px Courier New;
+	color: black;
+}	
+
+#menu ul
+{
+    list-style-type: none;
+}
+
+#menu ul li
+{
+	background: -webkit-linear-gradient(right, #E3E3E3, white);
+	text-decoration: none;
+	display: block;
+	width: 200px;
+	height: 60px;
+	line-height: 60px;
+	border: 1px solid black;
+	border-right: white;
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	float: right;
+	-webkit-box-shadow: rgb(110, 110, 110) 0px 5px 10px ;
+	-webkit-transition: width 0.3s;
+}
+
+#menu ul li:hover
+{
+	width:240px;
+}
+
+#main_section
+{
+	background: -webkit-linear-gradient(right, #EDEDED, white);
+	padding: 15px;
+	border: 2px solid black;
+	-webkit-box-flex: 1;
+	width: 50px;
+	-webkit-box-align: stretch;
+	-webkit-box-shadow: rgb(110, 110, 110) 10px 10px 10px ;
+	-webkit-border-bottom-right-radius: 25px;
+	-webkit-border-bottom-left-radius: 25px;
+}
+
+#content
+{
+	height: 700px;
+	margin: 40px;
+	height: 500px;
+	display:-webkit-box;
+	-webkit-box-orient:horizontal;
+}
+
+#main_encasement
+{
+
+}
+
+#footer
+{
+	margin-top: 15px;
+	clear: both;
+	padding: 20px;
+	text-align: center;
+	height: 20px;
+}
+
+#videoList
+{
+	list-style-type: none;
+}
+
+#videoList #one a
+{
+	display: block;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+/* boxes */
+#videoList li a #videoInfoContainer
+{
+	margin: 15px;
+	padding: 5px;
+	float: left;
+	display: block;
+	width: 200px;
+	height: 300px;
+	border: 1px solid black;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
+	background: -webkit-linear-gradient(right, #E8E8E8, white);
+	-webkit-transition: height 0.3s;
+}
+
+/* State Of Box When Hovering */
+#videoList li a #videoInfoContainer:hover
+{
+	height: 320px;
+	background: -webkit-linear-gradient(right, #D8D8D8, white);
+}
+
+/* image properties */
+#videoList li a img
+{
+	width: 100%;
+	height: 125px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
+}
+
+#videoTitle
+{
+	font: bold 18px Courier New;
+	color: Black;
+}
+
+#videoSubtitle
+{
+	font: 12px Courier New;
+	color: gray;
+}
+
+#table
+{
+	text-align: center;
+}
+
+#table a #tableElement
+{
+	margin: 10px;
+	border: 1px solid black;
+	padding: 10px;
+	text-align: left;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	-webkit-box-shadow: rgb(110, 110, 110) 2px 2px 2px;
+	background: background: -webkit-linear-gradient(left, #E0E0E0, #F6F6F6);	
+	height: 40px;
+	line-height: 40px;
+	text-decoration: none;
+	font: 20px Georgia;
+	color: black;
+	-webkit-transition: margin-left 0.5s;
+	
+}
+
+#table a #tableElement:hover
+{
+	background: -webkit-linear-gradient(right, #75E8FF, #BAF4FF);
+	margin-left: 0px;
+}
+
+#table a
+{
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
