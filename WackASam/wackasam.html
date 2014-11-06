@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Whack-A-Sam!</title>
+		
+		<link rel="stylesheet" href="samStyle.css"/>
+		<script type="text/javascript">
+				var score = 0;
+		</script>
+	</head>
+	
+	<body>
+		<div id="big_wrapper">
+			<script type="text/javascript">
+				
+				function addPoint()
+				{
+					alert(score);
+					score++;
+				}
+				
+			</script>
+			
+			<div id="headerScoreContainer">
+				<header id="top_header">
+					Whack-A-Sam
+				</header>
+				
+				<div id="score_tab">
+					<div id="scoreBox">
+						<div id="scoreText">
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="gameSpaceContainer">
+				<div id="imageContainer">
+					<img src="sam.jpg"/ onClick="addPoint()">
+				</div>
+			</div>
+			
+			<script type="text/javascript">
+				while(true)
+				{
+					document.getElementById("scoreText").innerHTML = score;				
+				}
+			</script>
+		</div>
+	</body>
+</html>

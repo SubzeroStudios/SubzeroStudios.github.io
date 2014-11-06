@@ -1,36 +1,18 @@
 <!doctype html>
 
-<html>
-	<head>
-		<title>The Styche Game</title>
-	</head>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Learning HTML5</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+	<div id="box">
+		<p id="text">arfafgargargarg</p>
+	</div>
 	
-	<body>
-			
-			
-			
-		<script type="text/javascript">
-			document.write("<h1 align='center'> How To Keep A Styche Entertained...</h1>");
-			document.write("<form align='center'><input type='button' value='Click To Play! :D' onClick='create();'></form>");
-			
-			function remove()
-			{
-				document.getElementById("Hi").innerHTML = "<div id='Hi' style='display:none;'><input type='button' value='Click Me!'/></div>";
-			}
-			
-			function create()
-			{
-				var newXPos = Math.floor(Math.random()*((screen.width) - 200));
-				var newYPos = Math.floor(Math.random()*((screen.height) - 200) + 40);
-				
-				
-				document.write("<div id='Hi' style='position: absolute; top: "+newYPos+"px; left: "+newXPos+"px; width: 100px; height: 100px; background-color: white; font-size: 40px;' onMouseOver='remove(); create();'><input type='button' value='  Click Me!  '/></div>");
-				
-				
-			}
-			
-		
-			
-		</script>
-	</body>
+</body>
+
 </html>

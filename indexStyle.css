@@ -20,11 +20,73 @@ body, section, aside, nav, hgroup, header, footer
 	color: black;
 }
 
+#boxbox
+{
+	margin-top: 25px;
+	margin-right: 40px; 
+	-webkit-box-flex: 1;
+	-webkit-box-orient:horrizontal;
+	-webkit-box-pack: ;
+}
+
+#topBox
+{
+	margin-top: 25px;
+	margin: 0 auto;
+	border: 2px solid black;
+	background: -webkit-linear-gradient(right, #EDEDED, white);
+	height: 50px;
+	width: 250px;
+	-webkit-box-shadow: rgb(110, 110, 110) 5px 5px 10px;
+	border-top-right-radius: 25px;
+	border-top-left-radius: 25px;
+	-webkit-box-pack: center;
+}
+
+#sectionHeader
+{
+	padding-top: 0px;
+	font: bold 40px Courier New;
+	color: black;
+	text-align: center;
+}
+
+#topFiller
+{
+	display:-webkit-box;
+	-webkit-box-orient:horizontal;
+}
+
+#filler
+{
+	margin-left: 40px;
+	width: 250px;
+	height: 50px;
+}
+
 #main_section #homeIntro
 {
 	padding: 10px;
+	text-align: justify;
+	font: 24px Georgia;
+	color: black;
+}
+
+#linksOnHome
+{
+	margin-top: 15px;
+	padding-bottom: 10px;
 	text-align: left;
 	font: 24px Georgia;
+	color: black;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+#linksOnHome h1
+{
+	text-align: center;
+	font: 36px Georgia;
 	color: black;
 }
 
@@ -50,14 +112,12 @@ body, section, aside, nav, hgroup, header, footer
 
 #menu
 {
-	
 	width: 250px;
 }
 
 /* Styling For Text Inside Nav Bar Boxes */
 nav ul li a
 {
-	
 	display: block;
 	text-decoration: none;
 	font: bold 45px Courier New;
@@ -91,8 +151,20 @@ nav ul li a
 	width:240px;
 }
 
+/* Styling For Text Inside Nav Bar Boxes */
+nav ul li a
+{
+	display: block;
+	text-decoration: none;
+	font: bold 45px Courier New;
+	color: black;
+}	
+
+/* THE MAIN INFORMATION BOX */
 #main_section
 {
+	height: 100%;
+	margin-bottom: 30px;
 	background: -webkit-linear-gradient(right, #EDEDED, white);
 	padding: 15px;
 	border: 2px solid black;
@@ -104,18 +176,14 @@ nav ul li a
 	-webkit-border-bottom-left-radius: 25px;
 }
 
+/* NAV BAR AND SECTION */
 #content
 {
-	height: 700px;
 	margin: 40px;
-	height: 500px;
+	margin-top: 0px;
+	height: 700px;
 	display:-webkit-box;
 	-webkit-box-orient:horizontal;
-}
-
-#main_encasement
-{
-
 }
 
 #footer
@@ -189,41 +257,66 @@ nav ul li a
 	color: gray;
 }
 
-#table
+#siteList
 {
-	text-align: center;
+	list-style-type: none;
 }
 
-#table a #tableElement
+#siteList #one a
 {
-	margin: 10px;
+	display: block;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+/* boxes */
+#siteList li a #siteInfoContainer
+{
+	margin: 15px;
+	padding: 5px;
+	float: left;
+	display: block;
+	width: 200px;
+	height: 300px;
 	border: 1px solid black;
-	padding: 10px;
-	text-align: left;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-	border-bottom-right-radius: 15px;
-	border-bottom-left-radius: 15px;
-	-webkit-box-shadow: rgb(110, 110, 110) 2px 2px 2px;
-	background: background: -webkit-linear-gradient(left, #E0E0E0, #F6F6F6);	
-	height: 40px;
-	line-height: 40px;
-	text-decoration: none;
-	font: 20px Georgia;
-	color: black;
-	-webkit-transition: margin-left 0.5s;
-	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
+	background: -webkit-linear-gradient(right, #E8E8E8, white);
+	-webkit-transition: height 0.3s;
 }
 
-#table a #tableElement:hover
+/* State Of Box When Hovering */
+#siteList li a #siteInfoContainer:hover
 {
-	background: -webkit-linear-gradient(right, #75E8FF, #BAF4FF);
-	margin-left: 0px;
+	height: 320px;
+	background: -webkit-linear-gradient(right, #D8D8D8, white);
 }
 
-#table a
+/* image properties */
+#siteList li a img
 {
-	text-decoration: none;
+	width: 100%;
+	height: 125px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
+}
+
+#siteTitle
+{
+	font: bold 18px Courier New;
+	color: Black;
+}
+
+#siteSubtitle
+{
+	font: 12px Courier New;
+	color: gray;
 }
 
 
