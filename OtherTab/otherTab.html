@@ -1,5 +1,7 @@
 <!doctype html>
 
+<!-- THIS SITE WRITTEN AND PRODUCED BY SUBZER0 2014-->
+
 <html>
 	<head>
 		<title>SubZER0's Index!</title>
@@ -21,35 +23,51 @@
 <meta name="msapplication-TileColor" content="#00aba9">
 <meta name="msapplication-TileImage" content="mstile-144x144.png">
 <meta name="application-name" content="SubZER0 Studios">
-		<link rel="stylesheet" href="indexStyle.css"/>
+		<link rel="stylesheet" href="../indexStyle.css"/>
 	</head>
-	
+
 	<body>
+		<div id="big_wrapper">
 			
+			<header id="top_header">
+				<h1>SubZER0's Index</h1>
+			</header>
 			
-			
-		<script type="text/javascript">
-			document.write("<h1 align='center'> How To Keep A Styche Entertained...</h1>");
-			document.write("<form align='center'><input type='button' value='Click To Play! :D' onClick='create();'></form>");
-			
-			function remove()
-			{
-				document.getElementById("Hi").innerHTML = "<div id='Hi' style='display:none;'><input type='button' value='Click Me!'/></div>";
-			}
-			
-			function create()
-			{
-				var newXPos = Math.floor(Math.random()*((screen.width) - 200));
-				var newYPos = Math.floor(Math.random()*((screen.height) - 200) + 40);
+			<!-- Top Heading -->
+			<div id="topFiller">
+				<div id="filler">
+				</div>
 				
-				
-				document.write("<div id='Hi' style='position: absolute; top: "+newYPos+"px; left: "+newXPos+"px; width: 100px; height: 100px; background-color: white; font-size: 40px;' onMouseOver='remove(); create();'><input type='button' value='  Click Me!  '/></div>");
-				
-				
-			}
+				<div id="boxbox">
+					<div id="topBox">
+						<div id="sectionHeader">
+							Other
+						</div>
+					</div>
+				</div>
+			</div>
 			
-		
-			
-		</script>
+			<div id="main_encasement">
+				<div id="content">	
+					<nav id="menu">
+						<ul>
+							<li id="home"><a href="../index.html">Home</a></li>
+							<li id="videos"><a href="../VideosTab/videosTab.html">Videos</a></li>
+							<li id="sites"><a href="../SitesTab/sitesTab.html">Sites</a></li>
+							<li id="other"><a href="otherTab.html">Other</a></li>
+						</ul>
+					</nav>
+					
+					<!-- What Each Page Will Differ In -->
+					<section id="main_section">
+						<p>TBA</p>
+					</section>
+				</div>
+				
+				<footer id="footer">
+					SubZER0 2014
+				</footer>
+			</div>
+		</div>
 	</body>
 </html>
