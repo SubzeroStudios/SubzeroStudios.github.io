@@ -6,7 +6,7 @@
 
 body
 {
-	background-color: #7AE9FF;
+	 background: -webkit-linear-gradient(right, #36DEFF, #82EAFF); 	
 }
 
 body, section, aside, nav, hgroup, header, footer
@@ -16,7 +16,7 @@ body, section, aside, nav, hgroup, header, footer
 
 #title
 {
-	font: bold 30px Georgia;
+	font: bold 30px Century Gothic;
 	color: black;
 }
 
@@ -46,7 +46,7 @@ body, section, aside, nav, hgroup, header, footer
 #sectionHeader
 {
 	padding-top: 0px;
-	font: bold 40px Courier New;
+	font: bold 40px Century Gothic;
 	color: black;
 	text-align: center;
 }
@@ -55,6 +55,7 @@ body, section, aside, nav, hgroup, header, footer
 {
 	display:-webkit-box;
 	-webkit-box-orient:horizontal;
+	/* whole area */
 }
 
 #filler
@@ -62,13 +63,14 @@ body, section, aside, nav, hgroup, header, footer
 	margin-left: 40px;
 	width: 250px;
 	height: 50px;
+	/* stationary */
 }
 
 #main_section #homeIntro
 {
 	padding: 10px;
 	text-align: justify;
-	font: 24px Georgia;
+	font: 24px Century Gothic;
 	color: black;
 }
 
@@ -77,7 +79,7 @@ body, section, aside, nav, hgroup, header, footer
 	margin-top: 15px;
 	padding-bottom: 10px;
 	text-align: left;
-	font: 24px Georgia;
+	font: 24px Century Gothic;
 	color: black;
 	margin-left: 50px;
 	margin-right: 50px;
@@ -86,7 +88,7 @@ body, section, aside, nav, hgroup, header, footer
 #linksOnHome h1
 {
 	text-align: center;
-	font: 36px Georgia;
+	font: 36px Century Gothic;
 	color: black;
 }
 
@@ -107,7 +109,7 @@ body, section, aside, nav, hgroup, header, footer
 	-webkit-box-flex: 1;
 	-webkit-box-align: stretch;
 	-webkit-box-shadow: rgb(110, 110, 110) 10px 10px 10px ;
-	font: Bold 20px AR BLANCA;
+	font: Bold 20px Century Gothic;
 }
 
 #menu
@@ -120,7 +122,7 @@ nav ul li a
 {
 	display: block;
 	text-decoration: none;
-	font: bold 45px Courier New;
+	font: 45px Century Gothic;
 	color: black;
 }	
 
@@ -156,7 +158,7 @@ nav ul li a
 {
 	display: block;
 	text-decoration: none;
-	font: bold 45px Courier New;
+	font: 45px Century Gothic;
 	color: black;
 }	
 
@@ -247,13 +249,13 @@ nav ul li a
 
 #videoTitle
 {
-	font: bold 18px Courier New;
+	font: bold 18px Century Gothic;
 	color: Black;
 }
 
 #videoSubtitle
 {
-	font: 12px Courier New;
+	font: 12px Century Gothic;
 	color: gray;
 }
 
@@ -309,20 +311,20 @@ nav ul li a
 
 #siteTitle
 {
-	font: bold 18px Courier New;
+	font: bold 18px Century Gothic;
 	color: Black;
 }
 
 #siteSubtitle
 {
-	font: 12px Courier New;
+	font: 12px Century Gothic;
 	color: gray;
 }
 
 #bigVideoTitle
 {
 	display: block;
-	font: bold 60px Courier New;
+	font: bold 60px Century Gothic;
 	color: Black;
 	background: -webkit-linear-gradient(right, #D8D8D8, white);
 	-webkit-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
@@ -347,7 +349,7 @@ nav ul li a
 	text-decoration: none;
 	display: block;
 	width: 400px;
-	font: bold 24px Courier New;
+	font: bold 24px Century Gothic;
 	color: Black;
 	background: -webkit-linear-gradient(right, #D8D8D8, white);
 	-webkit-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
@@ -364,7 +366,7 @@ nav ul li a
 	text-decoration: none;
 	display: block;
 	width: 400px;
-	font: bold 24px Courier New;
+	font: bold 24px Century Gothic;
 	color: Black;
 	background: -webkit-linear-gradient(right, #D8D8D8, white);
 	-webkit-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
