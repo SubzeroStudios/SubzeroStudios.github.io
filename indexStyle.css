@@ -6,8 +6,7 @@
 
 body
 {
-	 background: -webkit-linear-gradient(right, #48F026, #2AFA00); 	
-	  background: -webkit-linear-gradient(right, #48F026, #2AFA00); 
+	 background: -webkit-linear-gradient(right, #26FFD0, #26FFD0); 	
 }
 
 body, section, aside, nav, hgroup, header, footer
@@ -377,17 +376,19 @@ nav ul li a
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
 	margin: 10px auto;
-	opacity: 0.75;
-	-webkit-transition: opacity 1s, background 1s, width 1s, backrgound 1s;
+	opacity: 1;
 }
 
-
+@-webkit-keyframes flash
+{
+	0% {opacity: 0.2;}
+	50% {opacity: 1; width: 650px;}
+	100% {opacity: 0.2;}
+}
 
 #unableToSeeVideoA:hover
 {
-	opacity: 1;
-	background: #00DDFF;
-	width: 800px;
+	-webkit-animation: flash 0.5s infinite;
 }
 
 
