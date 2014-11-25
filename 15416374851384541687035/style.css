@@ -116,41 +116,66 @@ h1
 
 
 
-
+/* Container for butons */
 #button2
 {
-	background-color: #d22;
-	text-align: center;
-	font-family: Century Gothic, sans serif;
-	color: white;
-	text-shadow: 1px 1px 1px #000;
 	margin: 0px;
 	padding: 0px;
 	width: 300px;
 	height: 100px;
-	border-radius: 10px;
-	position: relative;
 	text-align: center;
+	color: white;
 }
 
 #button2 #question
 {
-	position: absolute;
+	position: relative;
+	background-color: #d22;
 	text-align: center;
 	font: 2em/100px Century Gothic, sans-serif;
 	text-shadow: 1px 1px 1px #000;
 	z-index: 2;
 	top: 0px;
 	left: 0px;
+	margin-top: -100px;
+	border-radius: 10px;
+	-webkit-transition: opacity 1s;
+}
+
+#button2 #question:hover
+{
+	opacity: 0;
 }
 
 #button2 #answer
 {
-	position: absolute;
+	position: relative;
+	background-color: #d22;
+	text-align: center;
+	font: 2em/100px Century Gothic, sans-serif;
+	text-shadow: 1px 1px 1px #000;
+	z-index: 2;
 	top: 0px;
 	left: 0px;
-	z-index: 1;
-	font-family: Century Gothic, sans serif;
-	color: white;
-	text-shadow: 1px 1px 1px #000;
+	border-radius: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
