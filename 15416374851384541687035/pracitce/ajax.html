@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Whack-A-Sam</title>
+		
+		<style>
+			#orders li
+			{
+				display: block;
+				list-style-type: none;
+				background-color: #aaaaaa;
+				height: 20px;
+				width: 200px;
+				margin: 5px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<h2>Coffee orders</h2>
+		
+		<ul id="orders">
+		</ul>
+		
+		<h4>Add coffee order</h4>
+		<p>name: <input type="text" id="name"></p>
+		<p>name: <input type="text" id="name"></p>
+		<button id="add-order">Add!</button>
+		
+		<script src="jquery-1.11.1.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				var $orders = $('#orders');
+			
+				$.ajax({
+					type: 'GET',
+					url: 'http://rest.learncode.academy/api/johnbob/friends',
+					success: function(data){
+						$.each(data, function(i, item){
+							$orders.append('<li>Name: '+ item.name + ', Drink: '+item.drink+'</li>');
+						});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

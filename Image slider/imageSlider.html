@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- This code created by Subzero for ZeroBiscuit.com -->
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" media="screen, projection" href="style2.css" />
+		<script src="jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="script.js"></script>
+		<style type="text/css">
+			*
+			{
+				margin: 0px;
+				padding: 0px;
+			}
+		
+			.window
+			{
+				overflow: hidden;
+				margin: 10px auto;
+				border-radius: 10px;
+				box-shadow: 10px 5px 5px black;
+			}
+			
+			.image
+			{
+				float: left;
+			}
+			
+			.buttonBox
+			{
+				height: 20px;
+				margin: 10px auto;
+				background-color: #D6D6D6;
+				padding: 4px;
+				border-radius: 10px;
+				overflow: auto; /* in case the amount of buttons surpasses the space available */
+			}
+			
+			.button
+			{
+				width: 15px;
+				height: 15px;
+				border-radius: 7px; /* to make the button appear as a circle, make the border radius half or almost half of the width */
+				background-color: #ADADAD;
+				cursor: pointer; /* changes the cursor when hovering over the button */
+				float: left; /* makes all of the buttons appear one after the other left to right. "display: inline-block;" would also work */
+				margin: 3px 2px; /* spacing */
+			}
+			
+			.currentPic /* button when selected, change to a darker color */
+			{
+				background-color: #595959;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="window">
+			<div class="slideReel">
+				<img src="1.jpg" class="image">
+				<img src="2.jpg" class="image">
+				<img src="3.jpg" class="image">
+				<img src="4.jpg" class="image">
+				<img src="5.jpg" class="image">
+				<img src="6.jpg" class="image">
+				<img src="1.jpg" class="image">
+				
+				<script>
+					var $window = $('.window');
+					var $slideReel = $window.find('.slideReel'); //save $('.slideReel') as a variable so that JQuery does not have to search the entire document every time it is referenced
+					var $image = $slideReel.find('.image'); //same as above
+					var $amntOfImgs = ($slideReel.find('img.image').length) - 1; //calculates the amount of images in slideReel (subtracts one due to the repeat image)
+					var imageWidth = 384; //sets the dimensions of the image
+					var imageHeight = 240; //...
+					$window.css({"width": imageWidth+"px", "height": imageHeight+"px"}); //sets dimensions of the window to that of one image
+					$image.css({"width": imageWidth+"px", "height": imageHeight+"px"}); //applies the dimensions to every image
+					$slideReel.css({"width": (imageWidth*($amntOfImgs+1))+"px", "height": imageHeight+"px"}); //sets the slide reel width and height (all of the images' widths combined and the height of each image)
+				</script>
+			</div>
+		</div>
+		
+		<div class="buttonBox">
+			<script>
+				/* create  one button per image */
+				for(i = 1; i < $amntOfImgs + 1; i++)
+				{
+					if(i==1) document.write('<div class=\"button currentPic\" id=\"'+i+'\"></div>'); //gives the first image the class of "currentPic"
+					else document.write('<div class=\"button\" id=\"'+i+'\"></div>'); //all others do not get the class "currentPic"
+				}
+				
+				var $buttonBox = $('.buttonBox');
+				$buttonBox.css({"width":(imageWidth - 10)+"px"}); //sets the width of the button container to 10px less than the window
+			</script>
+		</div>
+		
+		<script>
+			$(function() {
+				var slides = 1;
+				var animationDur = 300;
+				$image.on( "click", function(){
+					$buttonBox.find('#' + slides).removeClass('currentPic');
+					slides++;
+					$buttonBox.find('#' + slides).addClass('currentPic');
+					
+					if(slides-1 < $amntOfImgs){
+						$slideReel.animate({"margin-left":"-="+imageWidth+"px"}, animationDur, "swing");
+					}
+					else if(slides-1 >= $amntOfImgs){
+						$slideReel.animate({"margin-left":"-="+imageWidth+"px"}, animationDur, "swing", function(){
+							$slideReel.css({"margin-left":"0px"});
+							$buttonBox.find('#' + slides).removeClass('currentPic');
+							slides = 1;
+							$buttonBox.find('#' + slides).addClass('currentPic');
+						});
+					}
+				});
+				$buttonBox.find('.button').on("click", function(){
+					$buttonBox.find('#' + slides).removeClass('currentPic');
+					slides = $(this).attr('id');
+					$buttonBox.find('#' + slides).addClass('currentPic');
+					var newMargin = ((slides-1)*imageWidth);
+					$slideReel.animate({"margin-left": "-"+newMargin+"px"}, animationDur, "swing");
+				});
+			});
+		</script>
+	</body>
+</html>

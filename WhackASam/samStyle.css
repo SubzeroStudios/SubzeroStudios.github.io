@@ -1,0 +1,171 @@
+*
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+html, body
+{
+	height: 100%;
+}
+
+body
+{
+	background: -webkit-linear-gradient(right, #179600, #489C3A);
+	background: -moz-linear-gradient(right, #179600, #489C3A);
+	background: -ms-linear-gradient(right, #179600, #489C3A);
+	background: -o-linear-gradient(right, #179600, #489C3A);
+	background: linear-gradient(right, #179600, #489C3A);
+}
+
+#gameSpaceContainer
+{
+	cursor:url(hammertime.png) 64 64,auto;
+}
+
+#gameSpaceContainer.clicking
+{
+	cursor:url(hammertimeplanb.png)64 64,auto;
+}
+
+#big_wrapper
+{
+	width: 1200px;
+	margin: 10px auto;
+	height: 800px;
+}
+
+#top_header
+{
+	height: 125px;
+	background: white;
+	text-align: center;
+	border-radius: 15px;
+	font: 70px Century Gothic, sans serif;
+	line-height: 125px;
+	color: black;
+}
+
+#headerScoreContainer
+{
+	
+}
+
+#score_tab
+{
+	height: 40px;
+	background-color: blue;
+	padding: 2px;
+}
+
+#score_tab #scoreBox
+{	
+	margin: 0 auto;
+	border: 2px solid white;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	height: 36px;
+	width: 100px;
+	background-color: black;
+}
+
+#scoreText
+{
+	color: white;
+	line-height: 40px;
+	text-align: center;
+	font: 36px Courier New;
+}
+
+#gameSpaceContainer
+{
+	-webkit-box-flex: 1;
+	-webkit-box-align: stretch;
+	width: 1200px;
+	height: 800px;
+	background: url(grass.png);
+	overflow: hidden;
+}
+
+@-webkit-keyframes spin
+{
+	0% {-webkit-transform: rotate(-10deg);}
+	25% {-webkit-transform: rotate(10deg);}
+	50% {-webkit-transform: rotate(-10deg);}
+	75% {-webkit-transform: rotate(10deg);}
+	100% {-webkit-transform: rotate(0deg);}
+}
+
+@-moz-keyframes spin
+{
+	0% {-moz-transform: rotate(-10deg);}
+	25% {-moz-transform: rotate(10deg);}
+	50% {-moz-transform: rotate(-10deg);}
+	75% {-moz-transform: rotate(10deg);}
+	100% {-moz-transform: rotate(0deg);}
+}
+
+@-ms-keyframes spin
+{
+	0% {-ms-transform: rotate(-10deg);}
+	25% {-ms-transform: rotate(10deg);}
+	50% {-ms-transform: rotate(-10deg);}
+	75% {-ms-transform: rotate(10deg);}
+	100% {-ms-transform: rotate(0deg);}
+}
+
+@-o-keyframes spin
+{
+	0% {-o-transform: rotate(-10deg);}
+	25% {-o-transform: rotate(10deg);}
+	50% {-o-transform: rotate(-10deg);}
+	75% {-o-transform: rotate(10deg);}
+	100% {-o-transform: rotate(0deg);}
+}
+
+@keyframes spin
+{
+	0% {transform: rotate(-10deg);}
+	25% {transform: rotate(10deg);}
+	50% {transform: rotate(-10deg);}
+	75% {transform: rotate(10deg);}
+	100% {transform: rotate(0deg);}
+}
+
+div.holeSet
+{
+	width: 200px;
+	height: 150px;
+	position: relative;
+	display: inline-block;
+	border: 1px solid red;
+	margin: 20px;
+}
+
+.holeSet img.pic
+{
+	-webkit-animation: spin 0.5s;
+	-moz-animation: spin 0.5s;
+	-ms-animation: spin 0.5s;
+	-o-animation: spin 0.5s;
+	animation: spin 0.5s;
+	position: absolute;
+	width: 120px;
+	margin-left: 35px;
+	z-index:2;
+}
+
+.holeSet img.hole
+{
+	margin-top: 50px;
+	width: 200px;
+	position: absolute;
+	z-index:1;
+}
+
+#hole4
+{
+	
+}
