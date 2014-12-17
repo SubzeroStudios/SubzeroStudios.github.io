@@ -1,0 +1,113 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<title>Malala Yousafzai</title>
+		<meta name="author" content="Alex Elliott">
+		<meta charset="UTF-8">
+		<meta name="description" content="NHD malala yousafzai Student Project">
+		<link rel="stylesheet" href="style.css"/>
+		<script src="jquery-1.11.1.js"></script>
+		<style>
+			@-webkit-keyframes slide
+			{
+				0% {opacity: 0.7; margin-left: 500px}
+				100% {opacity: 0.1; margin-left: -50px;}
+			}
+
+			@-moz-keyframes slide
+			{
+				0% {opacity: 0.7; margin-left: 500px}
+				100% {opacity: 0.1; margin-left: -50px;}
+			}
+
+			@-ms-keyframes slide
+			{
+				0% {opacity: 0.7; margin-left: 500px}
+				100% {opacity: 0.1; margin-left: -50px;}
+			}
+
+			@-o-keyframes slide
+			{
+				0% {opacity: 0.7; margin-left: 500px}
+				100% {opacity: 0.1; margin-left: -50px;}
+			}
+
+			@keyframes slide
+			{
+				0% {opacity: 0.7; margin-left: 500px}
+				100% {opacity: 0.1; margin-left: 50px;}
+			}
+			
+			.arrow
+			{
+				margin-top: 60px;
+				-webkit-animation: slide 1.5s infinite;
+				-moz-animation: slide 1.5s infinite;
+				-ms-animation: slide 1.5s infinite;
+				-o-animation: slide 1.5s infinite;
+				animation: slide 1.5s infinite;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="bigWrapper">
+			<div id="leftBar">
+				<div id="picture">
+					<img src="malala.png"/>
+				</div>
+				
+				<div id="sliderContainer">
+					<nav>
+						<ul>
+							<li class="sliderLeft">
+								<a href="index.html">Home</a>
+							</li>
+							
+							<li class="sliderRight">
+								<a href="EarlyLife/earlyLife.html">Early Life</a>
+							</li>
+								
+							<li class="sliderLeft">
+								<a href="Current/current.html">Current</a>
+							</li>
+								
+							<li class="sliderRight">	
+								<a href="FAQ/faq.html">FAQ</a>
+							</li>
+								
+							<li class="sliderLeft">
+								<a href="Gallery/gallery.html">Gallery</a>
+							</li>
+							
+							<li class="sliderRight">	
+								<a href="Leadership/leadership.html">Leadership</a>
+							</li>
+								
+							<li class="sliderLeft">
+								<a href="Quotes/quotes.html">Quotes</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				
+				<div class="extras">
+					<nav>
+						<a href="Bibliography/bibliography.html">Bibliography</a>
+						<a href="http://www.malala-yousafzai.com/">Malala's Blog</a>
+						<a href="About/about.html">About This Site</a>
+					</nav>
+				</div>
+			</div>
+			
+			<div id="contentPane">
+				<h1>The Story of Malala Yousafzai</h1>
+				
+				<h2>To navigate through the website, click on the tabs featured on the left task bar.</h2>
+				
+				<img class="arrow" src="arrow.png"/>
+			</div>
+		</div>
+	</body>
+</html>

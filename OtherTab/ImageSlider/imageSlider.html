@@ -95,19 +95,26 @@
 		</div>
 		
 		<script>
-			$(function() {
+			$(function() 
+			{
 				var slides = 1;
 				var animationDur = 300;
-				$image.on( "click", function(){
+				
+				$image.on( "click", function()
+				{
 					$buttonBox.find('#' + slides).removeClass('currentPic');
 					slides++;
 					$buttonBox.find('#' + slides).addClass('currentPic');
 					
-					if(slides-1 < $amntOfImgs){
+					if(slides-1 < $amntOfImgs)
+					{
 						$slideReel.animate({"margin-left":"-="+imageWidth+"px"}, animationDur, "swing");
 					}
-					else if(slides-1 >= $amntOfImgs){
-						$slideReel.animate({"margin-left":"-="+imageWidth+"px"}, animationDur, "swing", function(){
+					
+					else if(slides-1 >= $amntOfImgs)
+					{
+						$slideReel.animate({"margin-left":"-="+imageWidth+"px"}, animationDur, "swing", function()
+						{
 							$slideReel.css({"margin-left":"0px"});
 							$buttonBox.find('#' + slides).removeClass('currentPic');
 							slides = 1;
@@ -115,7 +122,9 @@
 						});
 					}
 				});
-				$buttonBox.find('.button').on("click", function(){
+				
+				$buttonBox.find('.button').on("click", function()
+				{
 					$buttonBox.find('#' + slides).removeClass('currentPic');
 					slides = $(this).attr('id');
 					$buttonBox.find('#' + slides).addClass('currentPic');
