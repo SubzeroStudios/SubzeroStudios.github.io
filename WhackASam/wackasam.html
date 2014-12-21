@@ -1,120 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
 	<head>
 		<title>Whack-A-Sam</title>
-		
-		<link rel="stylesheet" href="samStyle.css"/>
+		<style>
+			h1
+			{
+				color: white;
+				font: 40px Century Gothic, sans serif;
+				text-align: center;
+			}
+			
+			h2
+			{
+				color: white;
+				font: 30px Century Gothic, sans serif;
+				text-align: center;
+			}
+			
+			img
+			{
+				width: 300px;
+				border-radius: 10px;
+				-webkit-box-shadow: rgb(110, 110, 110) 5px 5px 10px;
+				-moz-box-shadow: rgb(110, 110, 110) 5px 5px 10px;
+				-ms-box-shadow: rgb(110, 110, 110) 5px 5px 10px;
+				-o-box-shadow: rgb(110, 110, 110) 5px 5px 10px;
+				box-shadow: rgb(110, 110, 110) 5px 5px 10px;
+			}
+			
+			div
+			{
+				width: 300px;
+				border-radius: 10px;
+				margin: 0 auto;
+			}
+			
+			body
+			{
+				background: url('2brutal4styche.gif');
+				 background-repeat: no-repeat;
+				 -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+			}
+		</style>
 	</head>
 	
 	<body>
-		<div id="big_wrapper">
-			<div id="headerScoreContainer">
-				<header id="top_header">
-					Whack-A-Sam
-				</header>
-				
-				<div id="score_tab">
-					<div id="scoreBox">
-						<div id="scoreText">
-							<script>
-								var score = 0;
-								document.write(score);
-							</script>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div id="gameSpaceContainer">
-				<div class="holeSet" id="hole1">
-					<img class="pic" src="sam.png"/>
-					<img class="hole" src="hole.png"/>
-				</div>
-				
-				<div class="holeSet" id="hole2">
-					<img class="pic" src="sam.png"/>
-					<img class="hole" src="hole.png"/>
-				</div>
-				
-				<div class="holeSet" id="hole3">
-					<img class="pic" src="sam.png"/>
-					<img class="hole" src="hole.png"/>
-				</div>
-				
-				<div class="holeSet" id="hole4">
-					<img class="pic" src="sam.png"/>
-					<img class="hole" src="hole.png"/>
-				</div>
-				
-				<div class="holeSet" id="hole5">
-					<img class="pic" src="sam.png"/>
-					<img class="hole" src="hole.png"/>
-				</div>
-				
-				<div class="holeSet" id="hole6">
-					<img class="pic" src="sam.png"/>
-					<img class="hole" src="hole.png"/>
-				</div>
-				
-				<div class="holeSet" id="hole7">
-					<img class="pic" src="sam.png"/>
-					<img class="hole" src="hole.png"/>
-				</div>
-				
-				<div class="holeSet" id="hole8">
-					<img class="pic" src="sam.png"/>
-					<img class="hole" src="hole.png"/>
-				</div>
-				
-				<div class="holeSet" id="hole9">
-					<img class="pic" src="sam.png"/>
-					<img class="hole" src="hole.png"/>
-				</div>
-				
-				<div class="holeSet" id="hole10">
-					<img class="pic" src="sam.png"/>
-					<img class="hole" src="hole.png"/>
-				</div>
-				
-				<div class="holeSet" id="hole11">
-					<img class="pic" src="sam.png"/>
-					<img class="hole" src="hole.png"/>
-				</div>
-				
-				<div class="holeSet" id="hole12">
-					<img class="pic" src="sam.png"/>
-					<img class="hole" src="hole.png"/>
-				</div>
-			</div>
-			
-			<script src="../jquery-1.11.1.js"></script>
-			
-			<script type="text/javascript">
-				$(function(){
-					
-					var inProg = true;
-					
-					$('.pic').on("click", function(){
-						score++;
-						$('#scoreText').html(score);
-						var snd = new Audio("thump.mp3"); // buffers automatically when created
-						snd.play();
-						$(this).animate({height: '0px', top: '100px', opacity: '0.5'}, 100);
-					});
-					
-					$("#gameSpaceContainer").on("mousedown mouseup", function(e){
-						$("#gameSpaceContainer").toggleClass("clicking");
-					});	
-					
-					for(i = 1; i < 13; i++) /* loop through twelve times */
-					{
-						/*var $x = Math.floor(Math.random()*40);
-						$('#hole'+i).find('img.pic').css({margin: '+='+$x+'px'});
-						$('#hole'+i).find('img.hole').css({margin: '+='+$x+'px'});*/
-					}
-				});
-			</script>
-		</div>
+		<h1>We're Sorry! The website you have requested is currently under construction by a complete and total badass! Construction on the following project will most likely be completed in the following week.</h1>
+		
+		<div id="hi"><img src="alex1.JPG"></div>
+		
+		<h2>We apologize for any inconvenience!</h2>
+		
+		<audio autoplay loop>
+		<source src="song.mp3" type="audio/mpeg">
+		</audio>
 	</body>
 </html>

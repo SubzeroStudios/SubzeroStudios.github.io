@@ -28,11 +28,27 @@ body
 	cursor:url(hammertimeplanb.png)64 64,auto;
 }
 
+#panelConatiner
+{
+	width: 1200px;
+	margin: 10px auto;
+	height: 600px;
+	overflow-y: hidden;
+}	
+
+#startPanel
+{
+	width: 1200px;
+	margin: 10px auto;
+	height: 600px;
+	background-color: white;
+}
+
 #big_wrapper
 {
 	width: 1200px;
 	margin: 10px auto;
-	height: 800px;
+	height: 600px;
 }
 
 #top_header
