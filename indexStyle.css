@@ -6,11 +6,13 @@
 
 body
 {
-	 background: -webkit-linear-gradient(right, #26FFD0, #26FFD0); 	
+	/* background: -webkit-linear-gradient(right, #26FFD0, #26FFD0); 	
 	 background: -moz-linear-gradient(right, #26FFD0, #26FFD0); 	
 	 background: -ms-linear-gradient(right, #26FFD0, #26FFD0); 	
 	 background: -o-linear-gradient(right, #26FFD0, #26FFD0); 	
-	 background: linear-gradient(right, #26FFD0, #26FFD0); 	
+	 background: linear-gradient(right, #26FFD0, #26FFD0); 	*/
+	 /* background http://backgrounds.mysitemyway.com/background/tileable-metal-textures-4/ I DO NOT OWN THIS ALL CREDIT GOES TO RESPECTIVE OWNERS MYSITEMYWAY.COM */
+	 background: url('bgtexture2.png');
 }
 
 body, section, aside, nav, hgroup, header, footer
@@ -191,11 +193,7 @@ body, section, aside, nav, hgroup, header, footer
 
 #top_header 
 {
-	background: -webkit-linear-gradient(right, #EDEDED, white);
-	background: -moz-linear-gradient(right, #EDEDED, white);
-	background: -ms-linear-gradient(right, #EDEDED, white);
-	background: -o-linear-gradient(right, #EDEDED, white);
-	background: linear-gradient(right, #EDEDED, white);
+	background: url('furley_bg.png');
 	margin-top: 10px;
 	margin-left: 40px;
 	margin-right: 40px;
@@ -300,11 +298,7 @@ nav ul li a
 	display: block;
 	height: 750px;
 	margin-bottom: 30px;
-	background: -webkit-linear-gradient(right, #EDEDED, white);
-	background: -moz-linear-gradient(right, #EDEDED, white);
-	background: -ms-linear-gradient(right, #EDEDED, white);
-	background: -o-linear-gradient(right, #EDEDED, white);
-	background: linear-gradient(right, #EDEDED, white);
+	background: url('furley_bg.png');
 	padding: 15px;
 	border: 2px solid black;
 	-webkit-box-flex: 1;
@@ -372,11 +366,7 @@ nav ul li a
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
 	border-radius: 10px;
-	background: -webkit-linear-gradient(right, #EDEDED, white);
-	background: -moz-linear-gradient(right, #EDEDED, white);
-	background: -ms-linear-gradient(right, #EDEDED, white);
-	background: -o-linear-gradient(right, #EDEDED, white);
-	background: linear-gradient(right, #EDEDED, white);
+	background: url('furley_bg.png');
 	-webkit-box-shadow: rgb(110, 110, 110) 10px 10px 10px ;
 	-moz-box-shadow: rgb(110, 110, 110) 10px 10px 10px ;
 	-ms-box-shadow: rgb(110, 110, 110) 10px 10px 10px ;
