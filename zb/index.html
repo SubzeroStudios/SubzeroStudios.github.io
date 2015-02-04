@@ -9,11 +9,9 @@
 		<link rel='stylesheet' media='screen and (min-width: 1550px) and (max-width: 9999px)' href='1550x9999.css' />
 		<link rel='stylesheet' media='screen and (min-width: 1200px) and (max-width: 1549px)' href='1200x1549.css' />
 		<link rel='stylesheet' media='screen and (min-width: 481px) and (max-width: 1199px)' href='481x1199.css' />
-		<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="mobile.css" />
 	</head>
 
 	<body>
-		<script src="assets/jquery-1.11.1.js"></script>
 		<header>
 			<nav>
 				<a href="http://www.zerobiscuit.com/" class="mainTitle">
@@ -22,7 +20,7 @@
 
 				<ul class="tabList">
 					<li>
-						<a href="#">
+						<a href="">
 							Tutorials
 						</a>
 
@@ -33,7 +31,7 @@
 					</li>
 
 					<li>
-						<a href="#">
+						<a href="">
 							Youtube
 						</a>
 
@@ -45,7 +43,7 @@
 					</li>
 
 					<li>
-						<a href="#">
+						<a href="">
 							Twitter
 						</a>
 
@@ -57,12 +55,12 @@
 					</li>
 
 					<li>
-						<a href="#">
+						<a href="">
 							Games
 						</a>
 
 						<ul class="subList">
-							<li><a href="#">comming soon</a></li>
+							<li><a href="">comming soon</a></li>
 						</ul>
 					</li>
 
@@ -167,6 +165,7 @@
 		/* test if user is on a mobile device */
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) 
 		{
+			/* redirect to mobile version of the site */
  			window.location.replace("mobile.html");
 		}
 	</script>

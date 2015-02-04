@@ -1,9 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Mobile ZB</title>
-</head>
-<body>
-	testing mobile
-</body>
+	<head>
+		<title>Mobile ZB</title>
+		<link rel="stylesheet" type="text/css" href="mobile.css" />
+		<script src="assets/jquery-1.11.1.js"></script>
+	</head>
+
+	<body>
+		<span class="welcome">
+			Welcome To ZeroBiscuit!
+		</span>
+
+		<ul class="tabList">
+			<li>
+				<a href="#">Tutorials</a>
+				<ul>
+					<li><a href="#">DropDown</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Youtube</a>
+				<ul>
+					<li><a href="#">DropDown</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Twitter</a>
+				<ul>
+					<li><a href="#">DropDown</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Games</a>
+				<ul>
+					<li><a href="#">DropDown</a></li>
+					<li><a href="#">DropDown</a></li>
+					<li><a href="#">DropDown</a></li>
+					<li><a href="#">DropDown</a></li>
+					
+				</ul>
+			</li>
+			<li>
+				<a href="#">Contact</a>
+				<ul>
+					<li><a href="#">DropDown</a></li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+
+	<script>
+		/* run only when page has finished loading */
+		/* jQuery initialized in <head> section */
+		$(function(){
+			var $tabList = $('ul.tabList'); /* Only navigate the DOM once to improve speed */
+			var $dom = $tabList.find('li');
+			var $sub = $dom.find('ul li a');
+
+			$sub.hide();
+
+			$dom.on('click', function(){
+				$(this).find('ul li a').slideToggle(200);
+			});
+		});
+	</script>
 </html>
