@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+
+<!--
+	Dev log
+	=======
+
+	2/3/15] Fixed the tab navigation system
+			Added in the approprate links in their respective places
+			**next: add in announcements section under the tab menu
+
+
+-->
+
 <html>
 	<head>
 		<title>Mobile ZB</title>
@@ -61,7 +73,7 @@
 			$sub.hide();
 
 			$dom.on('click', function(){
-				$sub.hide(); /* hide all of the drop downs... */
+				$sub.slideUp(200); /* hide all of the drop downs... */
 				$(this).find('ul li a').slideToggle(200); /* show the one that you clicked on */
 			});
 		});
