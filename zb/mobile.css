@@ -39,6 +39,7 @@ span.welcome
 ul.tabList
 {
 	list-style-type: none;
+	margin-bottom: 50px;
 }
 
 ul.tabList li
@@ -75,4 +76,176 @@ ul.tabList li ul li a
 	text-decoration: none;
 	background-color: #282828;
 	width: 80%;
+}
+
+span.twitterTitle
+{
+	margin-bottom: 30px;
+	font-family: heading;
+	font-size: 100px;
+	color: #09a; /* white */
+	display: block;
+	text-align: center;
+	font-weight: 100;
+	text-shadow: 5px 5px 4px rgba(0, 52, 52, 1);  
+	text-decoration:none;
+	color: #FFFFFF;
+}
+
+/* background box */
+div.twitterBox
+{
+	background-color: #272727;
+    -webkit-box-shadow: 8px 8px 25px -10px rgba(15,15,15,1);
+    -moz-box-shadow: 8px 8px 25px -10px rgba(15,15,15,1);
+    box-shadow: 8px 8px 25px -10px rgba(15,15,15,1);
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+div.twitterContainer
+{
+    margin: 0 auto;
+    width: 500px;
+}
+
+span.announceTitle
+{
+	margin-bottom: 30px;
+	font-family: heading;
+	font-size: 100px;
+	color: #09a; /* white */
+	display: block;
+	text-align: center;
+	font-weight: 100;
+	text-shadow: 5px 5px 4px rgba(0, 52, 52, 1);  
+	text-decoration:none;
+	color: #FFFFFF;
+}
+
+.announcements
+{
+	background-color: #272727;
+    -webkit-box-shadow: 8px 8px 25px -10px rgba(15,15,15,1);
+    -moz-box-shadow: 8px 8px 25px -10px rgba(15,15,15,1);
+    box-shadow: 8px 8px 25px -10px rgba(15,15,15,1);
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 50px;
+    height: 790px;
+}
+
+.content
+{
+    background-color: #272727;
+    padding: 10px;
+    -webkit-box-shadow: 8px 8px 25px -10px rgba(15,15,15,1);
+    -moz-box-shadow: 8px 8px 25px -10px rgba(15,15,15,1);
+    box-shadow: 8px 8px 25px -10px rgba(15,15,15,1);
+    overflow-y: auto;
+    margin-bottom: 8px;
+    width: 775px;
+    height: 785px;
+    display: block;
+    margin: 0 auto;
+    
+}
+
+.content ul
+{
+	list-style-type: none;
+}
+
+.content ul li
+{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	padding: 20px;
+	background: #fff;
+	border-radius: 5px;
+	max-height: 200px;
+	overflow-y: auto; 
+	-webkit-box-shadow: 10px 10px 37px -13px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 37px -13px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 37px -13px rgba(0,0,0,0.75);
+
+	-webkit-animation: slideUp 0.5s ease-out; /* Safari 4+ */
+    -moz-animation:    slideUp 0.5s ease-out; /* Fx 5+ */
+    -o-animation:      slideUp 0.5s ease-out; /* Opera 12+ */
+    animation:         slideUp 0.5s ease-out; /* IE 10 */
+}
+
+.content ul li h2
+{
+	font-family: heading;
+	font-size: 50px;
+	/* color: #0AB; */
+	color: #000;
+}
+
+.content ul li p
+{
+	font-family: Century Gothic, Helvetica, sans serif;
+}
+
+span.aboutUsTitle
+{
+	margin-bottom: 30px;
+	font-family: heading;
+	font-size: 100px;
+	color: #09a; /* white */
+	display: block;
+	text-align: center;
+	font-weight: 100;
+	text-shadow: 5px 5px 4px rgba(0, 52, 52, 1);  
+	text-decoration:none;
+	color: #FFFFFF;
+}
+
+div.aboutUsBox
+{
+	background-color: #272727;
+    -webkit-box-shadow: 8px 8px 25px -10px rgba(15,15,15,1);
+    -moz-box-shadow: 8px 8px 25px -10px rgba(15,15,15,1);
+    box-shadow: 8px 8px 25px -10px rgba(15,15,15,1);
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 50px;
+    height: 200px;
+    overflow-x: auto;
+}
+
+ul.aboutList
+{
+	list-style-type: none;
+	width: 100%;
+	margin: 0 auto;
+}
+
+ul.aboutList li
+{
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	width: 350px;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+ul.aboutList li h1
+{
+	text-align: center;
+	font-family: heading;
+	font-size: 50px;
+}
+
+ul.aboutList li p
+{
+	font-family: Century Gothic, Helvetica, sans serif;
+	margin: 10px;
 }

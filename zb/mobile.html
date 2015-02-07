@@ -7,20 +7,23 @@
 	2/3/15] Fixed the tab navigation system
 			Added in the approprate links in their respective places
 			**next: add in announcements section under the tab menu
+					possibly add #0ab to selected parent a tag
+					add margin to the bottom of each <a> in the sublists
 
+	2/7/15] Added #0ab to selected parent a tag.
 
 -->
 
 <html>
 	<head>
-		<title>Mobile ZB</title>
+		<title>Half Sandwhich Studios</title>
 		<link rel="stylesheet" type="text/css" href="mobile.css" />
 		<script src="assets/jquery-1.11.1.js"></script>
 	</head>
 
 	<body>
 		<span class="welcome">
-			Welcome To ZeroBiscuit!
+			Welcome To Half Sandwhich Studios!
 		</span>
 
 		<ul class="tabList">
@@ -55,26 +58,95 @@
 			</li>
 			<li>
 				<a href="#">Contact</a>
-				<ul>
-					<li><a href="#">Comming Soon!</a></li>
-				</ul>
 			</li>
 		</ul>
+
+		<span class="twitterTitle">
+			Twitter
+		</span>
+
+		<div class="twitterBox">
+			<div class="twitterContainer">
+				 <a class="twitter-timeline" href="https://twitter.com/0BStudios" width="500px" data-widget-id="559158095260442624">
+				 	Tweets by @0BStudios
+				 </a> 
+				 <script>
+				 	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+				 </script> 
+			</div>
+		</div>
+
+		<span class="announceTitle">
+			Announcements
+		</span>
+
+		<div class="announcements">
+			<div class="content">
+				<ul>
+					<li>
+						<h2>Some New Changes...</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium illo eligendi fugit esse possimus explicabo quidem fuga provident, labore eos nam qui ex, ea ullam nesciunt ad hic sunt pariatur.</p>
+					</li>
+					<li>
+						<h2>Title</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, quae asperiores minus ut sunt dolorem quam laudantium suscipit ratione accusamus laboriosam, nemo ad odio laborum voluptatibus omnis pariatur ipsum fugit.</p>
+					</li>
+					<li>
+						<h2>Title</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet sint est voluptas voluptatum rem harum. Nulla alias voluptas, tempore eveniet nesciunt, corrupti, nisi deleniti, delectus veritatis ipsa facilis. Nam, consequuntur.</p>
+					</li>
+					<li>
+						<h2>Title</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid laborum, fugit sint aperiam totam eligendi, dignissimos et. Fugit praesentium quaerat vero, nam, eaque maiores unde porro, libero eveniet consequuntur ex!</p>
+					</li>
+
+					<li>
+						<h2>Title</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid laborum, fugit sint aperiam totam eligendi, dignissimos et. Fugit praesentium quaerat vero, nam, eaque maiores unde porro, libero eveniet consequuntur ex!</p>
+					</li>
+
+					<li>
+						<h2>Title</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid laborum, fugit sint aperiam totam eligendi, dignissimos et. Fugit praesentium quaerat vero, nam, eaque maiores unde porro, libero eveniet consequuntur ex!</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<span class="aboutUsTitle">
+			About Us
+		</span>
+
+		<div class="aboutUsBox">
+			<ul class="aboutList">
+				<li>
+					<h1>SubZero</h1>
+					<p>SubZero is a co-founder of Half Sandwhich Studios Studios and works primarly as the lead web designer but also as an executive developer for Half Sandwhich games. </p>
+				</li>
+				<li>
+					<h1>HerryBiscuit</h1>
+					<p>HerryBiscuit is a co-founder of Half Sandwhich Studios studios and works as one of the main programmers for games produced by Half Sandwhich Studios.</p>
+				</li>
+			</ul>
+		</div>
 	</body>
 
 	<script>
 		/* run only when page has finished loading */
 		/* jQuery initialized in <head> section */
 		$(function(){
+			var animSpeed = 200;
 			var $tabList = $('ul.tabList'); /* Only navigate the DOM once to improve speed */
 			var $dom = $tabList.find('li');
 			var $sub = $dom.find('ul li a');
 
-			$sub.hide();
+			$sub.hide(0);
 
 			$dom.on('click', function(){
-				$sub.slideUp(200); /* hide all of the drop downs... */
-				$(this).find('ul li a').slideToggle(200); /* show the one that you clicked on */
+				$sub.slideUp(animSpeed); /* hide all of the drop downs... */
+				$dom.find('a').css({'color':'#fff'}); /* Set all colors to white */
+				$(this).find('ul li a').slideToggle(animSpeed); /* show the one that you clicked on */
+				$(this).find('> a').css({'color':'#0ab'}); /* set selected <a> to #0ab */
 			});
 		});
 	</script>
