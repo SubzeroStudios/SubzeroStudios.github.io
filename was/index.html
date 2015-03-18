@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Whack A Sam</title>
+
+		<style>
+			body
+			{
+				background: url("http://i.imgur.com/Ujw9MVI.gif");
+				background-size: 100%;
+			}
+
+			div
+			{
+				font: 140px Impact;
+				color: white;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="div">
+			The Time Is Near
+		</div>
+
+		<script>
+			 function flashtext(ele,col) {
+			    var tmpColCheck = document.getElementById( ele ).style.color;
+
+			      if (tmpColCheck === 'blue') {
+			        document.getElementById( ele ).style.color = col;
+			      } else {
+			        document.getElementById( ele ).style.color = 'blue';
+			      }
+			    } 
+
+    setInterval(function() {
+        flashtext('div','red');
+    }, 50 );
+		</script>
+	</body>
+</html>
