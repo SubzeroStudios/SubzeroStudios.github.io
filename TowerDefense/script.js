@@ -970,9 +970,6 @@ function draw()
 		ctx.fillStyle = "white";
 		ctx.fillRect(0, 0, 300, canvas.height);
 
-		/* draw _logo */
-		ctx.drawImage(_logo, 0, 0);
-
 		/* _cashsign */
 		ctx.drawImage(_cashsign, 20, 200);
 		ctx.font = "30px Courier New";
@@ -1168,6 +1165,9 @@ function draw()
 
 		/* selected tile */
 		ctx.drawImage(_hoveranim, selectedTile[0], selectedTile[1]);
+
+		/* draw _logo */
+		ctx.drawImage(_logo, 0, 0);
 
 		/* notification pane */
 		ctx.fillStyle = "white";
