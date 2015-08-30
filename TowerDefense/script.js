@@ -1,10 +1,11 @@
 /*
- * 	Shitty Tower Defense created by Alex Elliott, 
+ * 	Custom Tower Defense created by Alex Elliott, 
  * 	a.k.a. 'SubZER0' for www.ZeroBiscuit.com
  *	
  * 	Contact: subzero@zerobiscuit.com
  * 	Additional credit: *Stack Overflow
  *  	               *Jack Lay, a.k.a. 'Styche'
+ 					   *Alex Emory a.k.a. 'Herry'
  *	
  *	*Feedback and suggestions welcome!*
  */
