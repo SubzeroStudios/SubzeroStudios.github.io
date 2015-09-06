@@ -1,0 +1,259 @@
+
+
+*
+{
+ padding: 0px;
+ margin: 0px;
+ font-family: Century Gothic, sans serif;
+ color: #fff;
+}
+
+body
+{
+ background-color: #333;
+ background-image: url("footer_lodyas.png");
+}
+
+header
+{
+ width: 100%;
+ height: 100px;
+ /*background-image: url("header.png");*/
+ /*background-repeat: repeat-x; */
+ background-color: #222;
+}
+
+nav
+{
+ font-size: 50px;
+ width: 750px;
+ text-align: center;
+ display: block;
+ margin: 0px auto;
+}
+
+nav>a
+{
+ text-align: center;
+ display: inline-block;
+ text-decoration: none;
+}
+
+nav>a:hover
+{
+	/* animation goes here */
+	
+
+
+ /*color: #02DE09;*/
+ cursor: pointer;
+ /*text-shadow: 2px 2px #000;*/
+}
+
+
+div#heading 
+{
+ display: inline-block;
+ text-align: center;
+ margin: 0, auto;
+}
+
+div#heading > a
+{
+ font-size: 60px;
+ color: #02DE09;
+ cursor: pointer;
+ text-decoration: none;
+}
+
+#about
+{
+ font-size: 90px;
+ color: #fff;
+ text-align: center;
+ margin-top: 30px;
+ margin-bottom: 30px;
+ width: 100%;
+}
+
+#contain
+{
+ position: relative;
+ display: block;
+ margin: 0px auto;
+ width: 750px;
+ height: 500px;
+}
+
+#bg
+{
+ display: block;
+ margin: 0px auto;
+ width: 750px;
+ height: 500px;
+ background-color: black;
+ opacity: 0.3;
+}
+
+#content
+{
+ display: block;
+ margin: 0px auto;
+ width: 730px;
+ height: 500px;
+ position: absolute;
+ top: 0px;
+ padding: 10px;
+ font-size: 25px;
+}
+
+#projectsContainer
+{
+ width: 1100px;
+ height: 800px;
+ display: block;
+ margin: 30px auto;
+ padding: 0px;
+ position: relative;
+ overflow: hidden;
+
+ -webkit-box-shadow: 10px 10px 5px 0px rgba(10,10,10,0.49);
+ -moz-box-shadow: 10px 10px 5px 0px rgba(10,10,10,0.49);
+ box-shadow: 10px 10px 5px 0px rgba(10,10,10,0.49);
+}
+
+#projectsList
+{
+	display: inline-block;
+	width: 200px;
+	height: 800px;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+}
+
+#projectsList ul
+{
+	overflow-y: hidden;
+}
+
+#projectsList ul li
+{
+	list-style-type: none;
+	margin: 0px;
+	text-align: center;
+	width: 100%;
+	height: 100px;
+	background-color: #111;
+
+ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#303030+0,131313+100 */
+    background: #303030; /* Old browsers */
+    background: -moz-linear-gradient(top,  #303030 0%, #131313 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#303030), color-stop(100%,#131313)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #303030 0%,#131313 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #303030 0%,#131313 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #303030 0%,#131313 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #303030 0%,#131313 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#303030', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+
+}
+
+#projectsList ul li:hover
+{
+	cursor: pointer;
+}
+
+
+#projectViewWindow
+{
+	display: inline-block;
+	height: 100%;
+	margin-left: 200px;
+	padding: 0px;
+	width: 900px;
+	height: 800px;
+}
+
+#projectViewWindow div
+{
+	background-color: #222;
+	position: relative;
+	width: 900px;
+	height: 800px;
+}
+
+#topText
+{
+	color: white;
+	font-size: 85px;
+	display: block;
+	margin: 0px auto;
+	text-align: center;
+	text-shadow: 2px 2px 2px rgba(2, 222, 9, 0.5);
+}
+
+#projectViewWindow div img
+{
+	display: block;
+	margin: 30px auto;
+
+	-webkit-box-shadow: 4px 4px 5px 0px rgba(15, 15, 15, 0.75);
+	-moz-box-shadow:    4px 4px 5px 0px rgba(15, 15, 15, 0.75);
+	box-shadow:         4px 4px 5px 0px rgba(15, 15, 15, 0.75);
+}
+
+#projectText
+{
+	width: 600px;
+	display: block;
+	margin: 0px auto;
+	font-size: 20px;
+}
+
+#contactBox
+{
+	width: 900px;
+	height: 300px;
+	background-color: #222;
+	display: block;
+	margin: 0px auto;
+	position: relative;
+	padding-top: 15px;
+	-webkit-box-shadow: 4px 4px 5px 0px rgba(15, 15, 15, 0.75);
+	-moz-box-shadow:    4px 4px 5px 0px rgba(15, 15, 15, 0.75);
+	box-shadow:         4px 4px 5px 0px rgba(15, 15, 15, 0.75);
+}
+
+#foc
+{
+	font-size: 35px;
+	margin-left: 15px;
+	list-style-type: none;
+	text-shadow: 1px 1px 2px rgba(2, 222, 9, 0.5);
+}
+
+#foc li
+{
+	margin-bottom: 15px;
+}
+
+#contactInfo
+{
+	list-style-type: none;
+}
+
+#contactInfo
+{
+	font-size: 35px;
+	list-style-type: none;
+	position: absolute;
+	top: 15px;
+	left: 370px;
+}
+
+#contactInfo li
+{
+	margin-bottom: 15px;
+}
+
+
