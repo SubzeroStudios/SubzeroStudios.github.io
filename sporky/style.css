@@ -1,0 +1,7 @@
+textarea
+{
+	overflow: auto;
+	resize: none;
+	height: 150px;
+	display:inline-block;
+}
