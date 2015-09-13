@@ -1,0 +1,45 @@
+body
+{
+	height: 100vh;
+	overflow: hidden;
+}
+
+.background
+{
+	width: 60%;
+	height: auto;
+	position: absolute;
+	opacity: 0.4;
+	margin-left: -10px;
+	position: absolute;
+	top: 20px;
+}
+
+#header
+{
+	position: relative;
+	text-align: center;
+	display: block;
+	margin: 40px auto;
+	font: 70px Century Gothic, sans serif;
+}
+
+#textareacontainer
+{
+	width: 900px;
+	display: block;
+	margin: 0px auto;
+	position: relative;
+	padding: 0px;
+}
+
+textarea
+{
+	overflow: auto;
+	resize: none;
+	height: 150px;
+	margin: 0px;
+	width: 49.7%;
+	display:inline-block;
+	opacity: 0.85;
+}
