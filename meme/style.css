@@ -1,0 +1,92 @@
+body
+{
+	position: relative;
+}
+.xyinput
+{
+	width: 80px;
+	font: 15px Courier New;
+	-webkit-appearance: none; 
+  margin: 0;
+}
+#heading
+{
+	text-align: center;
+	display: block;
+	font: 70px Comic Sans MS;
+	margin: 25px;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+}
+#changeLogButton
+{
+	width: 300px;
+	height: 60px;
+	background-color: #ddd;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font: 30px Comic Sans MS;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#changeLog
+{
+	width: 300px;
+	background-color: #ddd;
+	opacity: 0.7;
+	position: absolute;
+	right: 0;
+	top: 60px;
+	padding: none;
+}
+#changeLog ul
+{
+	padding: none;
+}
+#changeLog ul li /* each commit */
+{
+	margin-bottom: 5px;
+	margin-left: -30px;
+	background-color: #ccc;
+	width: 280px;
+	list-style-type: none;
+	padding: 2px;
+}
+#changeLog ul li ul
+{
+}
+#changeLog ul li ul li
+{
+	width: 100%;
+	font: 17px Courier New;
+}
+#changeLog ul li ul li:first-child
+{
+	list-style-type: none;
+	font: 20px bold Courier New;
+}
+#gameContainer
+{
+	display: block;
+	margin: 120px auto;
+	position: relative;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	cursor: default;
+}
+#gameContainer div
+{
+	line-height: 50px;
+	font: 0px Century Gothic; /*35*/
+	overflow: hidden;
+}

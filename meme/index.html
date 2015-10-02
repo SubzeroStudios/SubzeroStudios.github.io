@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MLG Game</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="jquery.js"></script> 
+		<script src="mainScript.js"></script>
+	</head>
+
+	<body>
+		X:<input id="xcoord" class="xyinput" alt="X" type="number" min=1 value=20 autofocus = "autofocus"></input>
+		Y:<input id="ycoord" class="xyinput" alt="Y" type="number" min=1 value=20></input>
+		BD:<input id="bombcoord" class="xyinput" alt="Y" type="number" min=1 max=100 value=25></input>
+		<button id="submitCoords" onclick="hi()" style="cursor:pointer;">Generate!</button>
+		<span id="heading">Memesweeper</span>
+		<span id="clock"></span>
+		<div id="gameContainer"></div>
+		<div id="changeLogButton">
+		Change Log
+		</div>
+		<div id="changeLog">
+			<ul>
+				<li> <!-- each new commit -->
+					<ul>
+						<li>[10/02/15 4:03PM]</li>
+						<li>+Added Change Log</li>
+						<li>+Added Bomb Density Change Box</li>
+						<li>+Uploaded To Website</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<script>
+			$('#changeLog').hide();
+			$('#changeLogButton').mousedown(function(){
+				$('#changeLog').slideToggle(250);
+			});
+		</script>
+	</body>
+</html>
