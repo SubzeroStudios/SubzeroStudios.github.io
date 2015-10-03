@@ -16,7 +16,7 @@ function generateBoard(x, y)
 {
 	clearInterval(clockInt);
 	inProg = true;
-	console.log("generated board with dems of "+x+" , "+y);
+	//console.log("generated board with dems of "+x+" , "+y);
 	var screenDems = {
 		width: x*tileWidth,
 		height: y*tileWidth
@@ -46,7 +46,7 @@ function generateBoard(x, y)
 			b = true;
 		}
 
-		tiles.push({x:tx,y:ty,bomb:b,ser:serial,flagged:false,turned:false});
+		tiles.push({x:tx,y:ty,bomb:b,ser:serial,flagged:false,turned:false,num:0,counted:false});
 		serial++;
 		tx += tileWidth;
 	}
@@ -82,7 +82,7 @@ function generateBoard(x, y)
 				/* middle left */
 				if((e.bomb)&&(t.x-tileWidth == e.x && t.y == e.y)) number++;
 			});
-			if(!number) number = "";
+			t.num = number;
 
 			switch(number)
 			{
@@ -133,30 +133,20 @@ function generateBoard(x, y)
 
 		if(e.which === 1) //left
 		{
-			$(this).hide();
 			tiles.forEach(function(t){
 				if(t.x == left && t.y == top && (!t.flagged))
 				{
-					$('#'+t.ser).hide(500);
+					$('#'+t.ser).hide(50);
+					t.turned = true;
 				}
 			});
-
-			console.log($(this).css("background-image"));
 		}
 		if(e.which === 3) //right
 		{
 			console.log("right-click");
 			$(this).css({"background-image":"url(flag.png)"});
 			tiles.forEach(function(t){
-				/*if(t.x == left && t.y == top && (!t.flagged))
-				{
-					t.flagged = true;
-				}
-				else if(t.x == left && t.y == top && t.flagged)
-				{
-					t.flagged = false;
-					$(this).css({"background-image":"url(explosion.gif)"});
-				}*/
+
 			});
 		}
 	});
@@ -172,25 +162,65 @@ function clock()
 		var minutes = 0;
 		var seconds = 0;
 		var tseconds = 0;
-		/*clockInt = setInterval(function(){
-			tseconds++;
-			if(tseconds >= 10)
-			{
-				tseconds = 0;
-				seconds++;
-			}
-			if(seconds >= 60)
-			{
-				seconds = 0;
-				minutes++;
-			}
-			if(minutes >= 60)
-			{
-				minutes = 0;
-				hours++;
-			}
-			$('#clock').html(hours+" : "+minutes+" : "+seconds+"."+tseconds);
-		},100);*/
+		clockInt = setInterval(function(){
+			tiles.forEach(function(l){
+				/* if its a pepe that has not been counted for */
+				if(l.num === 0 && !l.bomb && !l.counted && l.turned)
+				{
+					tiles.forEach(function(t2){
+						/* top left */
+						if(l.x-tileWidth == t2.x && l.y-tileWidth == t2.y)
+						{
+							$('#'+t2.ser).hide();
+							t2.turned = true;
+						}	
+						/* top middle */
+						if(l.x == t2.x && l.y-tileWidth == t2.y)		
+						{
+							$('#'+t2.ser).hide();
+							t2.turned = true;
+						}
+						/* top right */
+						if(l.x+tileWidth == t2.x && l.y-tileWidth == t2.y)	
+						{
+							$('#'+t2.ser).hide();
+							t2.turned = true;
+						}
+						/* middle right */
+						if(l.x+tileWidth == t2.x && l.y == t2.y)
+						{
+							$('#'+t2.ser).hide();
+							t2.turned = true;
+						}
+						/* bottom right */
+						if(l.x+tileWidth == t2.x && l.y+tileWidth == t2.y)
+						{
+							$('#'+t2.ser).hide();
+							t2.turned = true;
+						}
+						/* bottom middle */
+						if(l.x == t2.x && l.y+tileWidth == t2.y)
+						{
+							$('#'+t2.ser).hide();
+							t2.turned = true;
+						}
+						/* bottom left */
+						if(l.x-tileWidth == t2.x && l.y+tileWidth == t2.y)
+						{
+							$('#'+t2.ser).hide();
+							t2.turned = true;
+						}
+						/* middle left */
+						if(l.x-tileWidth == t2.x && l.y == t2.y)
+						{
+							$('#'+t2.ser).hide();
+							t2.turned = true;
+						}
+					});
+					l.counted = true;
+				}
+			});
+		},100);
 	}
 }
 
