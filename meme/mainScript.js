@@ -144,9 +144,20 @@ function generateBoard(x, y)
 		if(e.which === 3) //right
 		{
 			console.log("right-click");
-			$(this).css({"background-image":"url(flag.png)"});
+			//$(this).css({"background-image":"url(flag.png)"});
 			tiles.forEach(function(t){
-
+				if(t.x == left && t.y == top)
+				{
+					t.flagged = !t.flagged;
+					if(t.flagged)
+					{
+						$('#'+t.ser).css({"background-image":"url(flag.png)"});
+					}
+					else
+					{
+						$('#'+t.ser).css({"background-image":"url(emptybox.png)"});
+					}
+				}
 			});
 		}
 	});

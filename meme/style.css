@@ -41,6 +41,9 @@ body
 #changeLog
 {
 	width: 300px;
+	height: 400px;
+	overflow-y: auto;
+	overflow-x: hidden;
 	background-color: #ddd;
 	opacity: 0.7;
 	position: absolute;
