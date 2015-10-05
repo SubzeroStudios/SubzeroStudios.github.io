@@ -22,6 +22,38 @@ body
 	margin: 0px;
 	width: 100%;
 }
+#keyButton
+{
+	width: 100px;
+	height: 60px;
+	background-color: #ddd;
+	position: absolute;
+	left: 0;
+	top: 0;
+	font: 30px Comic Sans MS;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#key
+{
+	width: 100px;
+	height: 540px;
+	background-color: #ddd;
+	opacity: 0.7;
+	position: absolute;
+	left: 0;
+	top: 60px;
+	padding: none;
+	font: 35px Comic Sans MS;
+	line-height: 50px;
+}
 #changeLogButton
 {
 	width: 300px;
