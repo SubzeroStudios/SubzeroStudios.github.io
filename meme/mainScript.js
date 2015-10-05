@@ -271,7 +271,7 @@ function endGame(win) //win=0 is a LOSS | win=1 is a WIN
 	{
 		$('#menu #menuSubCont img').attr("src", "cage.gif");
 		$('#menuMainCont').css({"margin-top":"-600px"});
-		var dif2 = "Custom";
+		var dif = "Custom";
 		switch(choice)
 		{
 			case 1:
