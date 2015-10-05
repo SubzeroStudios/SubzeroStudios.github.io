@@ -8,18 +8,62 @@
 	</head>
 
 	<body>
-		X:<input id="xcoord" class="xyinput" alt="X" type="number" min=1 value=20 autofocus = "autofocus"></input>
+		<!--X:<input id="xcoord" class="xyinput" alt="X" type="number" min=1 value=20 autofocus = "autofocus"></input>
 		Y:<input id="ycoord" class="xyinput" alt="Y" type="number" min=1 value=20></input>
 		BD:<input id="bombcoord" class="xyinput" alt="Y" type="number" min=1 max=100 value=25></input>
-		<button id="submitCoords" onclick="hi()" style="cursor:pointer;">Generate!</button>
+		<button id="submitCoords" onclick="sendData(0)" style="cursor:pointer;">Generate!</button>-->
 		<span id="heading">Memesweeper</span>
 		<span id="clock"></span>
-		<div id="gameContainer"></div>
+		<div id="gameAndMenu">
+			<div id="gameContainer"></div>
+			<div id="menu">
+				<div id="menuMainCont">
+					<div id="chooseDif">Choose A Difficulty</div>
+					<div class="difs" style="background-color:#00D5FF;" onclick="sendData(1)">Beginner</div>
+					<div class="difs" style="background-color:#00FF26;"onclick="sendData(2)">Easy</div>
+					<div class="difs" style="background-color:#FFFB00;"onclick="sendData(3)">Medium</div>
+					<div class="difs" style="background-color:#FF9D00;"onclick="sendData(4)">Hard</div>
+					<div class="difs" style="background-color:#f00;"onclick="sendData(5)">Satan</div>
+
+					<div class="descs">10 x 10 <br/> 10% Bombs</div>
+					<div class="descs">15 x 15 <br/> 15% Bombs</div>
+					<div class="descs">20 x 20 <br/> 25% Bombs</div>
+					<div class="descs">25 x 25 <br/> 30% Bombs</div>
+					<div class="descs">50 x 50 <br/> 40% Bombs</div>
+
+					<div id="chooseDif">Custom Game</div>
+
+					<div id="customCont">
+						X <input id="xcoord" class="xyinput" alt="X" type="number" min=1 autofocus = "autofocus"></input>
+						Y <input id="ycoord" class="xyinput" alt="Y" type="number" min=1></input>
+						Bomb Density <input id="bombcoord" class="xyinput" alt="Bomb Density" type="number" min=1 max=100></input>
+						<button id="submitCoords" onclick="sendData(0)" style="cursor:pointer;">Generate!</button>
+					</div>
+				</div>
+
+				<div id="menuSubCont">
+					<div id="resetButton" onclick="sendData(choice)">Reset</div>
+					<img src="neil.gif" />
+					<div id="endMessage"></div>
+					<div id="backToMainMenu" onclick="returnToMenu()">Main Menu</div>
+				</div> 
+			</div>
+		</div>
 		<div id="changeLogButton">
 		Change Log
 		</div>
 		<div id="changeLog">
 			<ul>
+				<li> <!-- each new commit -->
+					<ul>
+						<li>[10/04/15 9:17PM]</li>
+						<li>+Added Menu With Preset Difficulties</li>
+						<li>+Added Win/Loss Detection</li>
+						<li>+Added Win/Loss Screen With Restart And Return To Main Menu</li>
+						<li>~Moved Location Of Custom Game Generator</li>
+						<li>~Minor Styling Changes To Get Elements Closer To Top Of Screen</li>
+					</ul>
+				</li>
 				<li> <!-- each new commit -->
 					<ul>
 						<li>[10/03/15 4:05PM]</li>
