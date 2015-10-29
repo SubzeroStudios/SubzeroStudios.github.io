@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>MLG Game</title>
+		<title>MemeSweeper</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script src="jquery.js"></script> 
 		<script src="mainScript.js"></script>
 	</head>
 
 	<body>
-		<!--X:<input id="xcoord" class="xyinput" alt="X" type="number" min=1 value=20 autofocus = "autofocus"></input>
-		Y:<input id="ycoord" class="xyinput" alt="Y" type="number" min=1 value=20></input>
-		BD:<input id="bombcoord" class="xyinput" alt="Y" type="number" min=1 max=100 value=25></input>
-		<button id="submitCoords" onclick="sendData(0)" style="cursor:pointer;">Generate!</button>-->
 		<span id="heading">Memesweeper</span>
 		<span id="clock"></span>
 		<div id="gameAndMenu">
@@ -31,7 +27,13 @@
 					<div class="descs">25 x 25 <br/> 30% Bombs</div>
 					<div class="descs">50 x 50 <br/> 40% Bombs</div>
 
-					<div id="chooseDif">Custom Game</div>
+					<br/>
+
+					<input type="radio" name="mode" value="Classic" style="width: 30px;" checked="checked"></input> <span style="font:30px Comic Sans Ms; margin-left: -10px;">Classic</span>
+
+					<input type="radio" name="mode" value="Epilepsy" style="width: 30px; margin-left: 15px;"></input> <span style="font:30px Comic Sans Ms; margin-left: -10px;">Epilepsy</span>
+
+					<div id="chooseDif" style="margin-bottom: -10px;">Custom Game</div>
 
 					<div id="customCont">
 						X <input id="xcoord" class="xyinput" alt="X" type="number" min=1 autofocus = "autofocus"></input>
@@ -54,6 +56,14 @@
 		</div>
 		<div id="changeLog">
 			<ul>
+				<li> <!-- each new commit -->
+					<ul>
+						<li>[10/29/15 4:34PM]</li>
+						<li>+Added Mode Selector</li>
+						<li>+Added epilepsy mode</li>
+						<li>~changed 'MLG Game' to 'Memesweeper'</li>
+					</ul>
+				</li>
 				<li> <!-- each new commit -->
 					<ul>
 						<li>[10/05/15 3:54PM]</li>

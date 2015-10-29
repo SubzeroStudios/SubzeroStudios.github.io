@@ -14,7 +14,7 @@ var clockInt;
 var choice;
 $(document).bind("contextmenu",function(e){e.preventDefault();});
 
-function generateBoard(x, y, bd)
+function generateBoard(x, y, bd, m) //x, y, bomb density, mode
 {
 	$('#menu').fadeOut(50);
 	$('#gameContainer').fadeIn(250);
@@ -64,7 +64,14 @@ function generateBoard(x, y, bd)
 		if(t.bomb)
 		{
 			totalBombs++;
-			$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#f00;text-align:center;background-image:url(explosion.gif), url(emptybox2.png);"></div>').appendTo('#gameContainer');
+			if(m == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#f00;text-align:center;background-image:url(explosion.gif), url(emptybox2.png);"></div>').appendTo('#gameContainer');
+
+			if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+			{
+				//mlgcosby.gif
+				$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(explosion.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
+			}
+
 			$('<div id="'+serial+'" class="cover" style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#f00;text-align:center;background-image:url(emptybox.png);cursor:pointer;" onclick='+"showTile('bomb', '"+serial+"')"+'></div>').appendTo('#gameContainer');
 		}
 		/* number or empty space */
@@ -95,40 +102,104 @@ function generateBoard(x, y, bd)
 			switch(number)
 			{
 				case 1:
-					$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(frog.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(frog.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+
+					if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+					{
+						//mlgcosby.gif
+						$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(frog.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
+					}
 					break;
 
 				case 2:
-					$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(spook.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(spook.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+
+						if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+						{
+							//mlgcosby.gif
+							$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(spook.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
+						}
 					break;
 
 				case 3:
-					$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(snoop.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(snoop.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+
+						if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+						{
+							//mlgcosby.gif
+							$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(snoop.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
+						}
 					break;
 
 				case 4:
-					$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(kiddance.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(kiddance.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+
+						if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+						{
+							//mlgcosby.gif
+							$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(kiddance.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
+						}
 					break;
 
 				case 5:
-					$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(doge.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(doge.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+
+						if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+						{
+							//mlgcosby.gif
+							$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(doge.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
+						}
 					break;
 
 				case 6:
-					$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(sanic.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(sanic.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+
+						if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+						{
+							//mlgcosby.gif
+							$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(sanic.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
+						}
 					break;
 
 				case 7:
-					$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(yourmemes.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(yourmemes.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+
+						if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+						{
+							//mlgcosby.gif
+							$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(yourmemes.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
+						}
 					break;
 
 				case 8:
-					$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(blacknod.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(blacknod.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+
+						if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+						{
+							//mlgcosby.gif
+							$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(blacknod.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
+						}
 					break;
 				default:
-					$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(pepe.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(pepe.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+
+					if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+					{
+						//mlgcosby.gif
+						$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(pepe.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
+					}
 			}
 			$('<div id="'+serial+'" class="cover" style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#f00;text-align:center;background-image:url(emptybox.png);cursor:pointer;" onclick='+"showTile('bomb', '"+serial+"')"+'></div>').appendTo('#gameContainer');
+
+			switch(m)
+			{
+				case 0: //Classic
+					break;
+
+				case 1: //Epilepsy
+					$('.cover').css({"background-image":"url(flashingrainbowsmall.gif)"});
+					break;
+			}
 		}	
 		serial++;
 	});
@@ -169,11 +240,13 @@ function generateBoard(x, y, bd)
 					t.flagged = !t.flagged;
 					if(t.flagged)
 					{
-						$('#'+t.ser).css({"background-image":"url(flag.png)"});
+						if(m == 0) $('#'+t.ser).css({"background-image":"url(flag.png), url(emptybox.png)"}); 
+						if(m == 1) $('#'+t.ser).css({"background-image":"url(flag.png),url(mlgcosby.gif)"});
 					}
 					else
 					{
-						$('#'+t.ser).css({"background-image":"url(emptybox.png)"});
+						if(m == 0) $('#'+t.ser).css({"background-image":"url(emptybox.png)"});
+						if(m == 1) $('#'+t.ser).css({"background-image":"url(flashingrainbowsmall.gif)"});
 					}
 				}
 			});
@@ -340,6 +413,9 @@ function endGame(win) //win=0 is a LOSS | win=1 is a WIN
 
 function returnToMenu()
 {
+	$('body').css({"background":"white"});
+	$('#keyButton').css({"background-image":""});
+	$('#changeLogButton').css({"background-image":""});
 	$('#menuMainCont').animate({"margin-top":"0px"},500);
 }
 
@@ -387,12 +463,36 @@ function sendData(a) //0:CUTSOM 1:very easy  2:easy  3:medium  4:hard  5.extreme
 			break;
 	}
 
+	var modes = document.getElementsByName('mode');
+	var mode;
+	for (i = 0; i < modes.length; i++)
+	{
+		if(modes[i].checked)
+		{
+			mode = i;
+		}
+	}
+
+	switch(mode)
+	{
+		case 0: //Classic
+			$('body').css({"background":"white"});
+			break;
+
+		case 1: //Epilepsy
+			alert("****SEVERE EPILEPSY WARNING****");
+			$('body').css({"background-image":"url(flashingrainbow.gif)"});
+			$('#keyButton').css({"background-image":"url(cosby.gif)"});
+			$('#changeLogButton').css({"background-image":"url(cosby.gif)"});
+			break;
+	}
+////$('.cover').css({"background-image":"url(flashingrainbowsmall.gif)"});
 	// reset variables from previous game
 	totalTiles = x * y;
 	totalBombs = 0;
 	tilesUncovered = 0; //resets just incase
 
-	generateBoard(x,y,bd);
+	generateBoard(x,y,bd, mode);
 }
 
 
