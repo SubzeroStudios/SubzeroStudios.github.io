@@ -1,0 +1,295 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>C Cheat Sheet For Dummies</title>
+
+		<style type="text/css">
+			.title
+			{
+				font: 40px Century Gothic;
+				display: block;
+				
+			}
+
+			.sections
+			{
+				font: 30px Century Gothic;
+				display: block;
+				margin-top: 50px;
+				margin-bottom: 15px;
+				text-decoration: underline;
+			}
+
+			.subSections
+			{
+				font: Bold 20px Century Gothic;
+				display: block;
+				margin-left: 50px;
+				margin-top: 50px;
+				margin-bottom: 15px;
+			}
+
+			.text
+			{
+				display: block;
+				margin-left: 50px;
+				margin-top: 15px;
+				font: 15px Century Gothic;
+			}
+
+			.exampleText
+			{
+				font: Bold 20px Century Gothic;
+				display: block;
+				margin-left: 50px;
+				margin-top: 25px;
+				margin-bottom: 15px;
+			}
+
+			.exampleCode
+			{
+				font: 16px Courier new;
+				margin-left: 100px;
+				display: block;
+			}
+
+			.comments
+			{
+				color: #00AD0E;
+			}
+
+			.varType
+			{
+				color: #007AE6;
+				font-weight: bold;
+			}
+
+			.if
+			{
+				color: #7800D4;
+				font-weight: bold;
+			}
+
+			.functionCall
+			{
+				color: #BD9700;
+				font-weight: bold;
+			}
+
+			.indentation
+			{
+				display: inline-block;
+				width: 50px;
+			}
+
+			.newLine
+			{
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<span class="title">C Cheat Sheet For Dummies (heh)</span>
+
+		<span class="sections">Basic Structure of The Project</span>
+
+			<span class="text">The structure of the project is setup between two functions: setup and loop. The setup function runs once when the program is started whereas the loop function runs over and over again until the board is turned off</span>
+
+			<span class="exampleText">Example</span>
+
+				<span class="exampleCode"><span class="varType">void</span> setup()</span> 
+				<span class="exampleCode">{</span> 
+		  			<span class="exampleCode"><span class="comments"><span class="indentation"></span><span class="indentation"></span>// Code to run ONCE when the program is started</span></span> 
+				<span class="exampleCode">}</span> 
+
+				<span class="exampleCode"><span class="varType">void</span> loop() </span> 
+				<span class="exampleCode">{</span> 
+		  			<span class="exampleCode"><span class="comments"><span class="indentation"></span><span class="indentation"></span>// Code to run repeatidly after the setup function</span></span> 
+				<span class="exampleCode">}</span> 
+
+			<span class="text">Having a loop with no delay will cause the loop to run over and over again, thousands and thousands of times a second. This is extremely CPU intensive and unnessicary in our case. To add delay to our loop, and anywhere else in the code, we use the delay function</span>
+			
+			<span class="exampleText">Example</span>
+				
+				<span class="exampleCode"><span class="comments">// Syntax: delay(timeInMilisecondsToBeDelayed)</span></span>
+
+				<span class="exampleCode"><span class="varType">void</span> setup() </span>
+				<span class="exampleCode">{</span>
+		  			<span class="exampleCode"><span class="comments"><span class="indentation"></span>// Code to run ONCE when the program is started</span></span>
+				<span class="exampleCode">}</span>
+
+				<span class="exampleCode"><span class="varType">void</span> loop() </span>
+				<span class="exampleCode">{</span>
+		  			<span class="exampleCode"><span class="comments"><span class="indentation"></span>// Code to run once every second (1000 milisconds = 1 second)</span></span>
+
+					<span class="exampleCode"><span class="indentation"></span><span class="functionCall">delay</span>(1000);</span>
+				<span class="exampleCode">}</span>
+
+			<span class="text">Now we have a solid structure and we can now begin coding</span>
+
+		<span class="sections">Variables And Such</span>
+			
+			<span class="text">Unlike in Python, we must specify what type of variable we will be creating when we give it a name.</span>
+
+			<span class="text">There are many different kinds of variables, but here are the ones you will need to know</span>
+				<span class="text"><span class="indentation"></span><span class="varType">int</span> (short for integer) -> A whole number -> 0, 1, 2, etc</span>
+				<span class="text"><span class="indentation"></span><span class="varType">double</span> -> A decimal number -> 0.1563, 54.123, 69.1, etc</span>
+
+			<span class="subSections">Declaring a variable</span>
+			
+				<span class="text">To set a variable in C, you must state the type, then the name, then an equal sign (provided you are giving that variable an initial value), then its value, then a semicolon</span>
+				
+				<span class="exampleText">Example</span>
+			
+					<span class="exampleCode"><span class="varType">int</span> apples = 4;</span>
+					<span class="exampleCode"><span class="varType">int</span> oranges; <span class="comments">// you do not have to give it an initial value if you do not wish to</span></span>
+					<span class="exampleCode"><span class="varType">double</span> money = 5.23;</span>
+					<span class="exampleCode"><span class="varType">double</span> percent = 0.96;</span>
+
+		<span class="sections">If / else if / else statements</span>
+			
+			<span class="text">If, else if, and else statements work the exact same in C as they do in Python; the only catch is the syntax is slightly different</span>
+
+			<span class="exampleText">Example</span>
+				
+				<span class="exampleCode"><span class="if">if</span>(condition)</span>
+				<span class="exampleCode">{</span>
+					<span class="exampleCode"><span class="comments"><span class="indentation"></span>// code to be run if the condition was true</span></span>
+				<span class="exampleCode">}</span>
+
+				<span class="exampleCode"><span class="if">else if</span>(condition)</span>
+				<span class="exampleCode">{</span>
+					<span class="exampleCode"><span class="comments"><span class="indentation"></span>// code to be run if the if statement's condition was false but this one's was true</span></span>
+				<span class="exampleCode">}</span>
+
+				<span class="exampleCode"><span class="if">else</span> <span class="comments">// notice there is no condition</span></span>
+				<span class="exampleCode">{</span>
+					<span class="exampleCode"><span class="comments"><span class="indentation"></span>//code to be run if none of the past if/else if statements' conditions were true</span></span>
+				<span class="exampleCode">}</span>
+			
+			<span class="text">What are conditions though? Here are some examples:</span>
+
+			<span class="exampleText">Example</span>
+				
+				<span class="exampleCode"><span class="if">if</span>(9 > 3)</span>
+				<span class="exampleCode">{</span>
+					<span class="exampleCode"><span class="comments"><span class="indentation"></span>// code that WILL run because 9 is greater than 3</span></span>
+				<span class="exampleCode">}</span>
+
+				<span class="exampleCode"><span class="varType">int</span> sides = 4;</span>
+
+				<span class="exampleCode"><span class="if">if</span>(sides <= 3)</span>
+				<span class="exampleCode">{</span>
+					<span class="exampleCode"><span class="comments"><span class="indentation"></span>// code that will NOT run because the variable 'sides' is not less than nor equal to 3</span></span>
+				<span class="exampleCode">}</span>
+
+			<span class="subSections">Relational Operators</span>
+			
+				<span class="text">Relational Operators are what let us compare variables and numbers to each other. They are as such:</span>
+					
+					<span class="indentation"></span><span class="indentation"></span><	<span class="indentation"></span>greater than<span class="indentation"></span><span class="indentation"></span>5 > 4 is TRUE <span class="newLine"></span>
+					<span class="indentation"></span><span class="indentation"></span><     <span class="indentation"></span>less than<span class="indentation"></span><span class="indentation"></span>4 < 5 is TRUE <span class="newLine"></span>
+					<span class="indentation"></span><span class="indentation"></span>>=    <span class="indentation"></span>greater than or equal<span class="indentation"></span><span class="indentation"></span>4 >= 4 is TRUE <span class="newLine"></span>
+					<span class="indentation"></span><span class="indentation"></span><=    <span class="indentation"></span>less than or equal<span class="indentation"></span><span class="indentation"></span>3 <= 4 is TRUE <span class="newLine"></span>
+					<span class="indentation"></span><span class="indentation"></span>==    <span class="indentation"></span>equal to<span class="indentation"></span><span class="indentation"></span>5 == 5 is TRUE <span class="newLine"></span>
+					<span class="indentation"></span><span class="indentation"></span>!=    <span class="indentation"></span>not equal to<span class="indentation"></span><span class="indentation"></span>5 != 4 is TRUE <span class="newLine"></span>
+
+		<span class="sections">Using The Pins of The Microcontroller</span>
+			
+			<span class="text">Before we begin, it is useful to understand some basic lingo on microcontrollers. Pins on the microcontroller can be turned on and off. This can allow you to, for example, turn an LED on and off. When we turn pins on and off, it is typically called "setting them HIGH" or "setting them LOW" (HIGH = on, LOW = off). This is because the pin is never at any one point completely on or completely off; You can change it to its HIGH or LOW voltage. Don't worry about this however, just think of it as you are turing the pins on and off (it'll make a lot more sense)</span>
+			
+			<span class="text">To set a pin on the Arduino to HIGH or LOW, we must first set it up as an output pin (you can also use it as an input pin but that's not needed for this project)</span>
+			
+			<span class="exampleText">Example</span>
+
+				<span class="exampleCode"><span class="comments">// Syntax: pinMode(pinNumber, <span class="varType">OUTPUT</span>);</span></span>
+
+				<span class="exampleCode"><span class="functionCall">pinMode</span>(9, <span class="varType">OUTPUT</span>); <span class="comments">// sets pin 9 as an output</span></span>
+
+			<span class="text">Now we get to turn the pin on and off (HIGH and LOW)</span>
+
+			<span class="exampleText">Example</span>
+				
+				<span class="exampleCode"><span class="comments">// Syntax: digitalWrite(pinWeSetupAsOutput, LOW/HIGH);</span></span>
+
+				<span class="exampleCode"><span class="functionCall">digitalWrite</span>(9, <span class="varType">LOW</span>); <span class="comments">// turns pin 9 off</span></span>
+				<span class="exampleCode"><span class="functionCall">digitalWrite</span>(9, <span class="varType">HIGH</span>); <span class="comments">// turns pin 9 on</span></span>
+
+		<span class="sections">Combining What We Have Learned So Far</span>
+
+			<span class="exampleCode"><span class="varType">void</span> setup() </span>
+			<span class="exampleCode">{</span>
+		  		<span class="exampleCode"><span class="indentation"></span><span class="functionCall">pinMode</span>(7, <span class="varType">OUTPUT</span>);</span>
+				<span class="exampleCode"><span class="indentation"></span><span class="functionCall">digitalWrite</span>(7, <span class="varType">LOW</span>);</span>
+			<span class="exampleCode">}</span>
+
+			<span class="exampleCode"><span class="varType">void</span> loop() </span>
+			<span class="exampleCode">{</span>
+		 		<span class="exampleCode"><span class="varType"><span class="indentation"></span>int</span> numberOfFeetToGo = 6;</span>
+
+				<span class="exampleCode"><span class="if"><span class="indentation"></span>if</span>(numberOfFeerToGo <= 10)</span>
+				<span class="exampleCode"><span class="indentation"></span>{</span>
+					<span class="exampleCode"><span class="indentation"></span><span class="indentation"></span><span class="functionCall">digitalWrite</span>(7, <span class="varType">HIGH</span>);</span>
+				<span class="exampleCode"><span class="indentation"></span>}</span>
+
+				<span class="exampleCode"><span class="indentation"></span><span class="functionCall">delay</span>(1000);</span>
+			<span class="exampleCode">}</span>
+
+			<span class="text">This simple program checks every second to see if our variable, 'numberOfFeetToGo', is less than 10. If it is, it turns pin number 7 (which is off from the start) on.</span>
+
+		<span class="sections">For Loops</span>
+			
+			<span class="text">For loops are used when you want to execute a certain block of code a certain number of times.</span>
+
+			<span class="exampleText">Example</span>
+
+				<span class="exampleCode"><span class="if">for</span> (<span class="varType">int</span> i = 0; i < 8; i++)</span>
+				<span class="exampleCode">{</span>
+					<span class="exampleCode"><span class="comments"><span class="indentation"></span>// code to be executed 8 times</span></span>
+				<span class="exampleCode">}</span>
+
+			<span class="text">The variable 'i' is a counter variable; it starts off at 0 (as shown by the 'int i = 0') and increases by 1 (as shown by the 'i++') every time it loops. Every loop, it checks to make sure that the middle condition ('i < 8') is true. If not, the loop stops. You can change the 'i' to whatever you want, but generally as a convention it is kept as i (unless you have a for loop inside of a for loop which is called a 'Nested For Loop').</span>
+
+			<span class="text">You can replace the 8 with a variable (or an expression)</span>
+
+			<span class="exampleText">Example</span>
+				
+				<span class="exampleCode"><span class="varType">int</span> apples = 12;</span>
+				<span class="exampleCode"><span class="varType">int</span> oranges = 4;</span>
+
+				<span class="exampleCode"><span class="if">for</span> (<span class="varType">int</span> i = 0; i < (apples+oranges); i++)</span>
+				<span class="exampleCode">{</span>
+					<span class="exampleCode"><span class="comments"><span class="indentation"></span>// code to be executed 16 times</span></span>
+				<span class="exampleCode">}</span>
+
+		<span class="sections">Functions</span>
+			
+			<span class="text">Functions are chunks of code that you can run when you wish by calling on them. They are syntactically made up of a return type, a name, and parameters. I won't bother teaching return types as you won't need to know them for this project. Simply use 'void' to indicate there is no returned variable.</span>
+			
+			<span class="exampleText">Example</span>
+
+				<span class="exampleCode"><span class="comments">// Syntax to make a function: returnType name(parameters) *if there are not any just leave empty perenthesis*</span></span>
+				<span class="exampleCode"><span class="comments">// Syntax to call a function: name(variablesOrNumbersToGiveToTheFunction) *if there are not any variables or numbers to give to the function just leave empty perenthesis*</span></span>
+
+				<span class="exampleCode"><span class="varType">void</span> setup() <span class="comments">//notice how these are functions...</span></span>
+				<span class="exampleCode">{</span>
+		  			<span class="exampleCode"><span class="indentation"></span>turnOnAPin(6); <span class="comments">//call on the function we wrote down a couple lines and give it the number '6'</span></span>
+				<span class="exampleCode">}</span>
+
+				<span class="exampleCode"><span class="varType">void</span> loop() </span>
+				<span class="exampleCode">{</span>
+					<span class="exampleCode"><span class="indentation"></span><span class="functionCall">delay</span>(1000);</span>
+				<span class="exampleCode">}</span>
+
+				<span class="exampleCode"><span class="varType">void</span> turnOnAPin(<span class="varType">int</span> pinNumber) <span class="comments">//creates function, saves the value we passed to the function above ('6') in the variable 'pinNumber' (notice we had to specify the type)</span></span>
+				<span class="exampleCode">{</span>
+					<span class="exampleCode"><span class="comments"><span class="indentation"></span>// code to be executed when function is called</span></span>
+
+					<span class="exampleCode"><span class="comments"><span class="indentation"></span>// anytime we reference 'pinNumber' now, it is the same as replacing it with a '6'</span></span>
+
+					<span class="exampleCode"><span class="indentation"></span><span class="functionCall">pinMode</span>(pinNumber, <span class="varType">OUTPUT</span>); <span class="comments">// sets pin '6' as output</span></span>
+					<span class="exampleCode"><span class="indentation"></span><span class="functionCall">digitalWrite</span>(pinNumber, <span class="varType">HIGH</span>); <span class="comments">//sets pin '6' to HIGH</span></span>
+				<span class="exampleCode">}</span>
+	</body>
+</html>
