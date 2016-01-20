@@ -86,6 +86,13 @@
 			{
 				display: block;
 			}
+
+			#footer
+			{
+				width: 100%;
+				display: block;
+				height: 200px;
+			}
 		</style>
 	</head>
 
@@ -291,5 +298,73 @@
 					<span class="exampleCode"><span class="indentation"></span><span class="functionCall">pinMode</span>(pinNumber, <span class="varType">OUTPUT</span>); <span class="comments">// sets pin '6' as output</span></span>
 					<span class="exampleCode"><span class="indentation"></span><span class="functionCall">digitalWrite</span>(pinNumber, <span class="varType">HIGH</span>); <span class="comments">//sets pin '6' to HIGH</span></span>
 				<span class="exampleCode">}</span>
+
+		<span class="sections">Scope</span>
+
+			<span class="text">Scope is an easy concept that is somewhat hard to explain. Scope refers to where a variable can be called and where it cannot.</span>
+
+			<span class="exampleText">Example</span>
+
+				<span class="exampleCode"><span class="varType">int</span>test = 74;</span>
+
+				<span class="exampleCode"><span class="if">if</span>(test == 74)</span>
+				<span class="exampleCode">{</span>
+					<span class="exampleCode"><span class="indentation"></span>test = 2; <span class="comments">//test CAN be called upon and changed</span></span>
+				<span class="exampleCode">}</span>
+
+			<span class="exampleText">Example</span>
+
+				<span class="exampleCode"><span class="if">if</span>(9 > 7)</span>
+				<span class="exampleCode">{</span>
+					<span class="exampleCode"><span class="indentation"></span><span class="varType">int</span> pirate = 6;</span>
+				<span class="exampleCode">}</span>
+
+				<span class="exampleCode">pirate = 2; //this CANNOT be called upon or changed because it is defined in the if statement and thus ONLY exists within the if statement</span>
+
+			<span class="text">Wherever you specify the variable type (int, double, etc) is your definition. You can only use this variable within the scope of the definition. </span>
+
+			<span class="exampleText">Example</span>
+
+				<span class="exampleCode"><span class="varType">int</span> test1 = 8;</span>
+				
+				<span class="exampleCode">samsHair();</span>
+			
+				<span class="exampleCode"><span class="varType">void</span> samsHair()</span>
+				<span class="exampleCode">{</span>
+					<span class="exampleCode"><span class="indentation"></span>test1 = 9; <span class="comments">//this CAN be called upon and changed</span></span>
+
+					<span class="exampleCode"><span class="indentation"></span><span class="varType">int</span> applePie = 2; <span class="comments">//we define this variable in samsHair() so we can only use it in samsHair()</span></span>
+				<span class="exampleCode">}</span>
+
+				<span class="exampleCode">test1 = 62; <span class="comments">//this CAN be called upon and changed because we're still in its scope</span></span>
+				<span class="exampleCode">applePie = 354; <span class="comments">//this CANNOT be called upon or changed because its scope was the function and we left the function</span></span>
+
+			<span class="text">So what if you want to have a variable that you can use anywhere? These are called 'global variables'. To make a global variable, all that you have to do is define it at the very begining of the program.</span>
+
+			<span class="exampleText">Example</span>
+				
+				<span class="exampleCode"><span class="varType">int</span> variableICanUseAnywhere = 65;</span>
+
+				<span class="exampleCode"><span class="varType">void</span> setup()</span>
+				<span class="exampleCode">{</span>
+					<span class="exampleCode"><span class="indentation"></span><span class="comments">//I can use it here</span></span>
+				<span class="exampleCode">}</span>
+				
+				<span class="exampleCode"><span class="comments">// ...and here</span></span>
+			
+				<span class="exampleCode"><span class="varType">void</span> loop()</span></body>
+				<span class="exampleCode">{</span>
+					<span class="exampleCode"><span class="indentation"></span><span class="comments">// ...and here</span></span>
+					
+					<span class="exampleCode"><span class="indentation"></span><span class="if">if</span>(4 == 4)</span>
+					<span class="exampleCode"><span class="indentation"></span>{</span>
+						<span class="exampleCode"><span class="indentation"></span><span class="indentation"></span><span class="comments">// ...and here</span></span>
+					<span class="exampleCode"><span class="indentation"></span>}</span>
+
+					<span class="exampleCode"><span class="indentation"></span><span class="comments">// ...and here</span></span>
+				<span class="exampleCode">}</span>
+
+				<span class="exampleCode"><span class="comments">// ...and even here</span></span>
+		<div id="footer"></div>
 	</body>
 </html>
