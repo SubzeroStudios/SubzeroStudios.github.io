@@ -31,6 +31,7 @@ body
 	height: 100px;
 	top: 250px; /* (HeightOfWindow/2)-(HeightOfPlayer/2) */
 	left: 375px; /* (WidthOfWindow/2)-(WidthOfPlayer/2) */
+	/*border: 1px solid black;*/
 }
 
 .flower
@@ -38,6 +39,7 @@ body
 	height: 50px;
 	width: 50px;
 	position:absolute;
+	/*border: 1px solid blue;*/
 }
 
 .tree
@@ -45,10 +47,31 @@ body
 	height: 200px;
 	width: 100px;
 	position:absolute;
+	/*border: 1px solid red;*/
 }
 
 .houseWall
 {
 	position: absolute;
 	background-color: #aaa;
+}
+
+#miniMap
+{
+	position:absolute;
+	top: 440px;
+	left: 10px;
+	width: 150px;
+	height: 150px;
+	background-color: #333;
+	opacity: 0.4;
+}
+
+#playerIcon
+{
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	background-color: red;
+	z-index: 900000;
 }
