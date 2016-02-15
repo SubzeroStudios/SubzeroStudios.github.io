@@ -1,0 +1,54 @@
+/* completely temporary bullshit until i find  better solutuion */
+body
+{
+	overflow-y: hidden;
+}
+
+#gameWindow
+{
+	width: 800px;
+	height: 600px;
+	border: 1px solid #aaa;
+	display: block;
+	margin: 15px auto;
+	position: relative;
+	overflow: hidden;
+}
+
+#gamePan
+{
+	width: 5000px;
+	height: 5000px;
+	position: relative;
+	background-image: url(assets/backdrop.png);
+}
+
+#player
+{
+	background: url(assets/playerFront.png);
+	position: absolute;
+	width: 50px;
+	height: 100px;
+	top: 250px; /* (HeightOfWindow/2)-(HeightOfPlayer/2) */
+	left: 375px; /* (WidthOfWindow/2)-(WidthOfPlayer/2) */
+}
+
+.flower
+{
+	height: 50px;
+	width: 50px;
+	position:absolute;
+}
+
+.tree
+{
+	height: 200px;
+	width: 100px;
+	position:absolute;
+}
+
+.houseWall
+{
+	position: absolute;
+	background-color: #aaa;
+}
