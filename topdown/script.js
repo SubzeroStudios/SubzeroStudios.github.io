@@ -1,13 +1,15 @@
+var debugMode = true;
+
 var keys = [];
 
 /* sets starting screen position */
-var screenOffsetX = 700;
-var screenOffsetY = 700;
+var screenOffsetX = 0;
+var screenOffsetY = 0;
 
 var playerPosX = screenOffsetX + ((parseInt(($('#gameWindow').css("width")).slice(0, -2))) / 2);
 var playerPosY = screenOffsetY + ((parseInt(($('#gameWindow').css("height")).slice(0, -2))) / 2);
 
-var playerSpeed = 7.5;
+var playerSpeed = 5;
 
 /* holds the keycodes for certain keys */
 var keyUp = 38;
@@ -19,12 +21,23 @@ var keyH = 72;
 
 var flowers = [];
 var trees = [];
+var graves = [];
 var houses = [];
+
+
 var hasBuiltHouse = false;
+var level = 1; //0 will be the intro; 1 will be the first actual level
+
 function init()
 {
+	/* debug mode (makes boxes around elements) */
+	if(debugMode)
+	{
+		//fuck me
+	}
+
 	/* makes some dank flowers and add them to their array*/
-	var flowerDensity = 275;
+	/*var flowerDensity = 275;
 	for (var i = 0; i <= flowerDensity-1; i++) 
 	{
 		var flowerXPos = Math.floor((Math.random() * (parseInt(($('#gamePan').css("width")).slice(0, -2)))) + 1);
@@ -37,10 +50,10 @@ function init()
 			type: flowerType,
 			id: i
 		});
-	}
+	}*/
 
 	/* make some dank 420 trees and at them in their arrays */
-	var treeDensity = 75; //125
+	/*var treeDensity = 75; //125
 	for (var i = 0; i <= treeDensity-1; i++) 
 	{
 		var treeXPos = Math.floor((Math.random() * (parseInt(($('#gamePan').css("width")).slice(0, -2)))) + 1);
@@ -53,7 +66,24 @@ function init()
 			type: treeType,
 			id: i
 		});
-	}
+	}*/
+
+	/* make some dank doink graves and at them in their arrays */
+	/*var graveDensity = 75; //125
+	for (var i = 0; i <= treeDensity-1; i++) 
+	{
+		var graveXPos = Math.floor((Math.random() * (parseInt(($('#gamePan').css("width")).slice(0, -2)))) + 1);
+		var graveYPos = Math.floor((Math.random() * (parseInt(($('#gamePan').css("height")).slice(0, -2)))) + 1);
+		var graveType = 1;
+
+		graves.push({
+			xPos: graveXPos,
+			yPos: graveYPos,
+			type: graveType,
+			id: i
+		});
+	}*/
+
 
 	for (var i = 0; i <= parseInt(($('#gamePan').css("height")).slice(0, -2))+200; i++) //200 is the max height for all the below items
 	{
@@ -67,8 +97,13 @@ function init()
 			if(t.yPos+200 == i) $("<div class='tree' id='t"+i+"' style='background-image:url(assets/tree"+t.type+".png);left:"+t.xPos+"px;top:"+t.yPos+"px;z-index:"+(t.yPos+200)+"'></div>").appendTo("#gamePan");
 		});
 
+		//125 is the max height of the graves
+		graves.forEach(function(g){
+			if(g.yPos+125 == i) $("<div class='grave' id='t"+i+"' style='background-image:url(assets/graveFront.png);left:"+g.xPos+"px;top:"+g.yPos+"px;z-index:"+(g.yPos+45)+"'></div>").appendTo("#gamePan");
+		});
 
-		if(playerPosY+100 == i) $("<div id='player' style='background-image:url(assets/playerFront.png);left:100px;top:100px;z-index:"+(playerPosY+100)+";'></div>").appendTo("#gamePan");
+
+		if(playerPosY+100 == i) $("<div id='player' style='left:100px;top:100px;z-index:"+(playerPosY+100)+";'></div>").appendTo("#gamePan");
 	}
 
 	/* create the minimap */
@@ -127,16 +162,38 @@ function update()
 					}
 				}
 			});
+			graves.forEach(function(g){
+				/* if player lines up with the grave X-wise
+					50 is the width of the player
+					75 is the width of the grave */
+				if((playerPosX >= (g.xPos-50)) && (playerPosX <= (g.xPos + 75)))
+				{
+					if((playerPosY + 100) < (g.yPos + 45)) //if the player is above the gravestone (not whole grave)
+					{
+						if(   ((playerPosY+playerSpeed) > (g.yPos-60))) //I have no idea why its minus 60 this makes no sense let the insanity commence. Lord hlep us all. Okay aparently for some fucking reason its getting its yPos from the bottom side and not the top I don't have any fucking clue why but who gives a shit it works.
+						{
+							canContinue = false;
+						}
+					}
+				}
+			});
 
 			if(canContinue)
 			{
-				screenOffsetY += playerSpeed;
+				if((playerPosY+50) >= ((parseInt($('#gameWindow').css("height").slice(0, -2)))/2)) screenOffsetY += playerSpeed;
+
+
+
 				playerPosY += playerSpeed
 			}
-
-
-			$("#player").css({"background-image":"url(assets/playerFront.png)"});
 		}
+
+		else if(playerPosY + 100 + playerSpeed <= parseInt(($('#gamePan').css("height")).slice(0, -2)))
+		{
+			playerPosY += playerSpeed;
+		}
+
+		$("#player").css({"background-image":"url(assets/bodyFrontShrunk.png)"});
 	}
 	if(keys[keyUp])
 	{
@@ -161,33 +218,66 @@ function update()
 					}
 				}
 			});
+			graves.forEach(function(g){
+				/* if player lines up with the grave X-wise
+					50 is the width of the player
+					75 is the width of the grave */
+				if((playerPosX >= (g.xPos-50)) && (playerPosX <= (g.xPos + 75)))
+				{
+					if((playerPosY + 100) >= (g.yPos + 45)) //if the player is below the gravestone
+					{
+						if(   ((playerPosY-playerSpeed) < (g.yPos-45))) //I have no idea why its minus, this makes no sense let the insanity commence. Lord hlep us all. g.yPos is the bottom side for some fucking reason wtf
+						{
+							canContinue = false;
+						}
+					}
+				}
+			});
 
 			if(canContinue)
 			{
-				screenOffsetY -= playerSpeed;
+				if((playerPosY+50) <= (  parseInt(($('#gamePan').css("height")).slice(0, -2)) - ((parseInt($('#gameWindow').css("height").slice(0, -2)))/2))) screenOffsetY -= playerSpeed;
 				playerPosY -= playerSpeed;
 			}
-			$("#player").css({"background-image":"url(assets/playerBack.png)"});
 		}
+
+		else if(playerPosY - playerSpeed >= 0)
+		{
+			playerPosY -= playerSpeed;
+		}
+
+		$("#player").css({"background-image":"url(assets/bodyBackShrunk.png)"});
 	}
 	if(keys[keyLeft])
 	{
 		//if the player wont go off the screen
 		if((screenOffsetX - playerSpeed) >= 0) 
 		{
-			screenOffsetX -= playerSpeed;
-			playerPosX -= playerSpeed
-			$("#player").css({"background-image":"url(assets/playerLeftSide.png)"});
+			if((playerPosX+25) <= (  parseInt(($('#gamePan').css("width")).slice(0, -2)) - ((parseInt($('#gameWindow').css("width").slice(0, -2)))/2))) screenOffsetX -= playerSpeed;
+			playerPosX -= playerSpeed;
 		}
+
+		else if(playerPosX - playerSpeed >= 0)
+		{
+			playerPosX -= playerSpeed;
+		}
+
+
+		$("#player").css({"background-image":"url(assets/bodyLeftShrunk.png)"});
 	}
 	if(keys[keyRight])
 	{
 		//if the player wont go off the screen
 		if(screenOffsetX <= parseInt(($('#gamePan').css("width")).slice(0, -2)) - playerSpeed - (parseInt(($('#gameWindow').css("width")).slice(0, -2))))
 		{ 
-			screenOffsetX += playerSpeed;
+			if((playerPosX+25) >= ((parseInt($('#gameWindow').css("width").slice(0, -2)))/2)) screenOffsetX += playerSpeed;
 			playerPosX += playerSpeed
-			$("#player").css({"background-image":"url(assets/playerRightSide.png)"});
+			$("#player").css({"background-image":"url(assets/BodyRightShrunk.png)"});
+		}
+
+		else if(playerPosX + 25 + playerSpeed <= parseInt(($('#gamePan').css("width")).slice(0, -2)))
+		{
+			playerPosX += playerSpeed;
 		}
 	}
 
@@ -198,8 +288,8 @@ function update()
 
 	/* player's icon on the minimap */
 	$('#playerIcon').css({
-		"top":""+(parseInt(($('#miniMap').css("top")).slice(0, -2))+(((playerPosY+50)/5000)*parseInt(($('#miniMap').css("height")).slice(0, -2))))+"px",
-		"left":""+(parseInt(($('#miniMap').css("left")).slice(0, -2))+(((playerPosX+25)/5000)*parseInt(($('#miniMap').css("width")).slice(0, -2))))+"px",
+		"top":""+(parseInt(($('#miniMap').css("top")).slice(0, -2))+(((playerPosY+50)/(parseInt($('#gamePan').css("height").slice(0, -2))))*parseInt(($('#miniMap').css("height")).slice(0, -2))))+"px",
+		"left":""+(parseInt(($('#miniMap').css("left")).slice(0, -2))+(((playerPosX+25)/(parseInt($('#gamePan').css("width").slice(0, -2))))*parseInt(($('#miniMap').css("width")).slice(0, -2))))+"px",
 		"z-index":""+(playerPosY+100)+""
 	});
 
@@ -253,3 +343,10 @@ function gameLoop()
 }
 
 setInterval(gameLoop, 1000/60); //updates 60 times a second
+
+
+
+
+
+/*(parseInt($('#gamePan').css("height")).slice(0, -2))
+(parseInt($('#gamePan').css("width")).slice(0, -2))*/
