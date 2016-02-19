@@ -1,0 +1,49 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Graphical Sorter</title>
+
+		<style>
+			h1
+			{
+				text-align: center;
+			}
+
+			#sortContainer
+			{
+				width: 500px;
+				height: 400px;
+
+				background-color: black;
+
+				display: block;
+				margin: 0 auto;
+			}
+
+			.sortBox
+			{
+				background-color: green;
+				display: inline-block;
+			}
+
+			button
+			{
+				display: block;
+				margin: 0 auto;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<h1>Graphical Sorter</h1>
+
+		<div id="sortContainer"></div>
+
+		<button id="submitCoords" onclick="generate()" style="cursor:pointer;">Generate</button>
+
+		<button id="submitCoords" onclick="sort()" style="cursor:pointer;">Sort</button>
+
+		<script src="script.js"></script>
+	</body>
+</html>
