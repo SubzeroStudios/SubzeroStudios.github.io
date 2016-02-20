@@ -271,14 +271,15 @@ function update()
 		if(screenOffsetX <= parseInt(($('#gamePan').css("width")).slice(0, -2)) - playerSpeed - (parseInt(($('#gameWindow').css("width")).slice(0, -2))))
 		{ 
 			if((playerPosX+25) >= ((parseInt($('#gameWindow').css("width").slice(0, -2)))/2)) screenOffsetX += playerSpeed;
-			playerPosX += playerSpeed
-			$("#player").css({"background-image":"url(assets/BodyRightShrunk.png)"});
+			playerPosX += playerSpeed;
 		}
 
-		else if(playerPosX + 25 + playerSpeed <= parseInt(($('#gamePan').css("width")).slice(0, -2)))
+		else if(playerPosX + 50 + playerSpeed <= parseInt(($('#gamePan').css("width")).slice(0, -2)))
 		{
 			playerPosX += playerSpeed;
 		}
+
+		$("#player").css({"background-image":"url(assets/BodyRightShrunk.png)"});
 	}
 
 	if(keys[keyH] && !hasBuiltHouse) buildHouse();
