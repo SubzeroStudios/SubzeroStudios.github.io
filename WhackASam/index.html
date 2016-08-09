@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+
+
+<!-- If any need to contact me may arise, subzero@zerobiscuit.com -->
+
+<!--
+	TODO
+	
+finish .addClass('up');
+difficulties
+
+
+
+-->
+
+<html>
+	<head>
+		<title>Whack-A-Sam</title>
+		<script src="../jquery-1.11.1.js"></script>
+		<script src="jquery.easing.1.3.js"></script>
+		<link rel="stylesheet" href="samStyle.css"/>
+		
+		<script type="text/javascript">
+			/* Set Up Variables */
+			var score = 0;
+			var inProg = false;
+			var amntOfSams = 12;
+		</script>
+	</head>
+	
+	<body>
+		<div id="big_wrapper">
+			<!-- Container for bothe title and score box -->
+			<div id="headerScoreContainer">
+				<!-- box with wak a sam in it -->
+				<header id="top_header">
+					<img src="assets/samgif.gif"/>
+				</header>
+				
+				<div id="score_tab"> <!-- blue bar  well its red now so... -->
+					<div class="redBar"></div>
+					<img src="assets/images/extras/timeBar.png" class="timeBar"></img>
+
+					<div id="scoreBox">
+						<div id="scoreText">
+							<!--<script>
+								document.write(score);
+							</script>-->
+							0
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="panelConatiner">
+				<div id="startPanel">
+					<!-- start screen-->
+					<span class="welcomeText">Welcome To Whack A Sam!</span>
+					<span class="welcomeText2">Choose Your Gamemode</span>
+
+					<ul class="gameModeTitles">
+						<li>60 Seconds</li>
+						<li>Race To 30 Sams</li>
+						<li>Special</li>
+					</ul>
+
+					<ul class="gameModePanel">
+						<li>
+							<div class="easyB diffucultyButton">Easy</div>
+							<div class="mediumB diffucultyButton">Medium</div>
+							<div class="hardB diffucultyButton">Hard</div>
+						</li>
+						<li>
+							<div class="easyA diffucultyButton">Easy</div>
+							<div class="mediumA diffucultyButton">Medium</div>
+							<div class="hardA diffucultyButton">Hard</div>
+						</li>
+						<li>
+							<div class="diffucultyButton">test1</div>
+							<div class="diffucultyButton">test2</div>
+							<div class="diffucultyButton">test3</div>
+						</li>
+					</ul>
+
+					<script>
+						function readBox()
+						{
+							var txtinput = document.getElementById('txtinput').value;
+							alert(txtinput);
+						}
+					</script>
+
+					<div class="inputContainer">
+						<input type="text" id="txtinput"/>
+						<input type="button" value="Tempt Fate" onClick="readBox()" id="fateButton"/>
+					</div>
+				</div>
+				<div id="gameSpaceContainer">
+					<img src="assets/images/backgrounds/grass.png" class="grass" />
+
+					<script type="text/javascript">
+
+						/* set animation time */
+						var speed = 300; //milliseconds dont change!
+						var downSpeed = 100;
+						var spawnTime = 100; //| | |
+
+						/* init array */
+						var timeLeft = [];
+
+						/* set all of the timeLefts to 0 by default */
+						for (i = 0; i < amntOfSams; i++)
+						{
+							timeLeft.push(0);
+						}
+
+						/* check for error */
+						if(timeLeft.length != amntOfSams)
+						{
+							/* throw error */
+							alert("ERROR: >timeLeft array length");
+						}
+
+						/* Load in pics of sam */
+						var src = ["assets/images/samImages/0.png", 
+								   "assets/images/samImages/1.png", 
+								   "assets/images/samImages/2.png", 
+						           "assets/images/samImages/3.png",
+						           "assets/images/samImages/4.png",
+						           "assets/images/samImages/5.png",
+						           "assets/images/samImages/0.1.png", 
+								   "assets/images/samImages/1.1.png", 
+								   "assets/images/samImages/2.1.png", 
+						           "assets/images/samImages/3.1.png",
+						           "assets/images/samImages/4.1.png",
+						           "assets/images/samImages/5.1.png"];
+						var amntOfImgs = src.length;
+
+						/* Render Boxes */
+						for (i = 0; i < amntOfSams; i++) 
+						{
+							document.write('<div class="container">');
+								document.write('<img id='+i+' class="imgSam" src='+src[Math.floor(Math.random()*amntOfImgs)]+' draggable="false" />');
+								document.write('<img class="hole" src="assets/images/extras/hole.png" draggable="false" />');
+							document.write('</div>');
+							
+						}
+
+						fall(true);
+
+						/* drop down the sam */
+						function fall(x, y)
+						{/* (x: all or individual sam?) (y: which sam?) */
+							/* start of game lower all sams */
+							if(x)
+							{
+								for (i = 0; i < amntOfSams; i++) 
+								{
+									$('#'+i).animate({
+										"top":"130px",
+										"opacity":"0.7"
+									}, 0);
+								}
+							}
+
+							/* lower individual sam */
+							else if(!x)
+							{
+								timeLeft[y] = 0;
+
+								$('#'+y).animate({
+									"top":"130px",
+									"opacity":"0.7"
+								}, downSpeed);
+							}
+
+							$('#'+i).removeClass('up');
+						}
+
+					</script>
+				</div>
+
+				<div class="endPanel">
+					
+					<span class="welcomeText">Game Over</span>
+
+					<span id="finalScore">0</span> <span id="samsThing">Sams on </span> <span id="diffdisp"></span>
+
+					<div class="final restart">Restart</div>
+					<div class="final main">Main Menu</div>
+				</div>
+			</div>
+			
+			<script type="text/javascript">
+				/* run only when page has finished loading */
+				$(function(){
+
+					var difficulty = 0; /* 1easy 2meduim 3hard */
+
+					var minSpawn = 5; /* defaults */
+					var maxSpawn = 15;
+
+					var timePerGame = 60000; /* one minute */
+
+					$startPanel = $('#startPanel');
+					$startPanel.find('.easyB').on("click", function(){
+						difficulty = 1;
+
+						minSpawn = 5;
+						maxSpawn = 20;
+
+						startGame();
+					});
+					$startPanel.find('.mediumB').on("click", function(){
+						difficulty = 2;
+
+						minSpawn = 3;
+						maxSpawn = 15;
+
+						startGame();
+					});
+					$startPanel.find('.hardB').on("click", function(){
+						difficulty = 3;
+
+						minSpawn = 2;
+						maxSpawn = 10;
+
+						startGame();
+					});
+
+					function startGame()
+					{
+						if(difficulty == 0) alert("ERROR: no difficulty chosen?");
+
+						inProg = true;
+						pullUpMenu();
+						gameLoop();
+					} 
+
+					function pullUpMenu()
+					{
+						$startPanel.animate({
+							"margin-top": "-650px"
+						}, 500);
+					}
+
+					function rise(i)
+					{
+						$('#'+i).animate({
+							"top":"0px",
+							"opacity":"1"
+						}, speed);
+
+						$('#'+i).addClass('up');
+
+						timeLeft[i] = (Math.floor(Math.random()*maxSpawn) + minSpawn);
+					}
+
+					function gameLoop()
+					{
+						/* sam updater */
+						setInterval(function()
+						{
+							/* update the time each sam has left */
+							for (i = 0; i < amntOfSams; i++)
+							{
+								timeLeft[i] -= 1;
+
+								if(timeLeft[i] <= 0)
+								{ 
+									timeLeft[i] = 0;
+									/* lower the sam */
+									fall(false, i);
+								}
+							}
+
+							rise(Math.floor(Math.random()*amntOfSams));
+
+						}, spawnTime);
+
+						$('.timeBar').animate({"marginLeft":"-1200px"}, timePerGame, 'linear', function()
+						{
+							endSession(score);
+						}); /* move the time bar to the left in 60 seconds */
+						$('.redBar').animate({"opacity":"1"}, timePerGame, 'easeInQuart'); /* changes the background color */
+
+						$('.imgSam').click(function()
+						{
+							/*if($(this).attr('id')).hasClass('up'))
+							{*/
+								fall(false, ($(this).attr('id')));
+								score++;
+								document.getElementById('scoreText').innerHTML = score;
+							/*}*/
+						});
+						
+					} 
+
+					function endSession(scr)
+					{
+						inProg = false;
+
+
+						$('#gameSpaceContainer').animate({
+							"margin-top": "-800px"
+						}, 500);
+
+						document.getElementById('finalScore').innerHTML = score;
+
+						switch(difficulty)
+						{
+							case 1:
+								document.getElementById('diffdisp').innerHTML = "easy";
+								break;
+
+							case 2:
+								document.getElementById('diffdisp').innerHTML = "meduim";
+								break;
+
+							case 3:
+								document.getElementById('diffdisp').innerHTML = "hard";
+								break;
+						}
+
+						var $endPanel = $('.endPanel');
+						$endPanel.find('.restart').on("click", function()
+						{
+							score = 0;
+							document.getElementById('scoreText').innerHTML = score;
+						});
+
+						$endPanel.find('.main').on("click", function()
+						{
+							window.location.reload();
+						});
+					}
+
+					/* Hammer Movement */
+					$("#gameSpaceContainer").on("mousedown mouseup", function(e)
+					{
+						$("#gameSpaceContainer").toggleClass("clicking");
+					});
+				});
+			</script>
+		</div>
+	</body>
+</html>
+
