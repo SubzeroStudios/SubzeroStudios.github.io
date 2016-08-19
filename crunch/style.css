@@ -1,0 +1,83 @@
+/* Fonts */
+@font-face {
+    font-family: typewriter;
+    src: url(assets/fonts/typewriter.ttf);
+}
+
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+body
+{
+	position: relative;
+}
+
+#heading
+{
+	text-align: center;
+	display: block;
+	font: 70px typewriter;
+	margin: 10px;
+	width: 100%;
+}
+
+#changeLogButton
+{
+	width: 300px;
+	height: 60px;
+	background-color: #ddd;
+	position: absolute;
+	right: 0;
+	top: -10px;
+	background-image: url(assets/images/takesoffglasses.gif);
+	font: 30px typewriter;
+	line-height: 50px;
+	text-align: center;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#changeLog
+{
+	width: 300px;
+	/*height: 400px;*/
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: #ddd;
+	background-image: url(assets/images/pepeRainbow.gif);
+    background-attachment: fixed;
+	opacity: 0.7;
+	position: absolute;
+	right: 0;
+	top: 50px;
+	padding: none;
+}
+#changeLog ul
+{
+	padding: none;
+}
+#changeLog ul li /* each commit */
+{
+	display: block;
+	margin: 5px auto;
+	background-color: #ccc;
+	width: 280px;
+	list-style-type: none;
+	padding: 2px;
+}
+#changeLog ul li ul li
+{
+	width: 100%;
+	font: 17px Courier New;
+}
+#changeLog ul li ul li:first-child
+{
+	list-style-type: none;
+	font: 20px bold Courier New;
+}
