@@ -3,6 +3,7 @@ var boardDems = {
 	width: 10,
 	height: 10
 };
+var mode = [0, 0];
 var ty = 0;
 var tx = 0;
 var tiles = [];
@@ -18,6 +19,7 @@ $(document).bind("contextmenu",function(e){e.preventDefault();});
 
 function generateBoard(x, y, bd, m) //x, y, bomb density, mode
 {
+	console.log(mode);
 	$('#menu').fadeOut(50);
 	$('#gameContainer').fadeIn(250);
 
@@ -66,9 +68,9 @@ function generateBoard(x, y, bd, m) //x, y, bomb density, mode
 		if(t.bomb)
 		{
 			totalBombs++;
-			if(m == 0 || m== 2) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#f00;text-align:center;background-image:url(explosion.gif), url(emptybox2.png);"></div>').appendTo('#gameContainer');
+			if(m[0] == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#f00;text-align:center;background-image:url(explosion.gif), url(emptybox2.png);"></div>').appendTo('#gameContainer');
 
-			if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+			if(m[0] == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
 			{
 				//mlgcosby.gif
 				$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(explosion.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
@@ -104,9 +106,9 @@ function generateBoard(x, y, bd, m) //x, y, bomb density, mode
 			switch(number)
 			{
 				case 1:
-					if(m == 0 || m== 2) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(frog.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m[0] == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(frog.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
 
-					if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+					if(m[0] == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
 					{
 						//mlgcosby.gif
 						$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(frog.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
@@ -114,9 +116,9 @@ function generateBoard(x, y, bd, m) //x, y, bomb density, mode
 					break;
 
 				case 2:
-					if(m == 0 || m== 2) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(spook.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m[0] == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(spook.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
 
-						if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+						if(m[0] == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
 						{
 							//mlgcosby.gif
 							$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(spook.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
@@ -124,9 +126,9 @@ function generateBoard(x, y, bd, m) //x, y, bomb density, mode
 					break;
 
 				case 3:
-					if(m == 0 || m== 2) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(snoop.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m[0] == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(snoop.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
 
-						if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+						if(m[0] == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
 						{
 							//mlgcosby.gif
 							$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(snoop.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
@@ -134,9 +136,9 @@ function generateBoard(x, y, bd, m) //x, y, bomb density, mode
 					break;
 
 				case 4:
-					if(m == 0 || m== 2) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(kiddance.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m[0] == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(kiddance.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
 
-						if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+						if(m[0] == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
 						{
 							//mlgcosby.gif
 							$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(kiddance.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
@@ -144,9 +146,9 @@ function generateBoard(x, y, bd, m) //x, y, bomb density, mode
 					break;
 
 				case 5:
-					if(m == 0 || m== 2) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(doge.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m[0] == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(doge.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
 
-						if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+						if(m[0] == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
 						{
 							//mlgcosby.gif
 							$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(doge.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
@@ -154,9 +156,9 @@ function generateBoard(x, y, bd, m) //x, y, bomb density, mode
 					break;
 
 				case 6:
-					if(m == 0 || m== 2) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(sanic.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m[0] == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(sanic.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
 
-						if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+						if(m[0] == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
 						{
 							//mlgcosby.gif
 							$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(sanic.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
@@ -164,9 +166,9 @@ function generateBoard(x, y, bd, m) //x, y, bomb density, mode
 					break;
 
 				case 7:
-					if(m == 0 || m== 2) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(yourmemes.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m[0] == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(yourmemes.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
 
-						if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+						if(m[0] == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
 						{
 							//mlgcosby.gif
 							$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(yourmemes.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
@@ -174,34 +176,28 @@ function generateBoard(x, y, bd, m) //x, y, bomb density, mode
 					break;
 
 				case 8:
-					if(m == 0 || m== 2) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(blacknod.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m[0] == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(blacknod.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
 
-						if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+						if(m[0] == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
 						{
 							//mlgcosby.gif
 							$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(blacknod.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
 						}
 					break;
 				default:
-					if(m == 0 || m== 2) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(pepe.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
+					if(m[0] == 0) $('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(pepe.gif), url(emptybox2.png);">'+number+'</div>').appendTo('#gameContainer');
 
-					if(m == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
-					{
-						//mlgcosby.gif
-						$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(pepe.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
-					}
+						if(m[0] == 1)//epilepsy one (i used '== 1' simply for easier reading if i add future ones)
+						{
+							//mlgcosby.gif
+							$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(pepe.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
+						}
 			}
 			$('<div id="'+serial+'" class="cover" style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#f00;text-align:center;background-image:url(emptybox.png);cursor:pointer;" onclick='+"showTile('bomb', '"+serial+"')"+'></div>').appendTo('#gameContainer');
 
-			switch(m)
-			{
-				case 0: //Classic
-					break;
-
-				case 1: //Epilepsy
-					$('.cover').css({"background-image":"url(flashingrainbowsmall.gif)"});
-					break;
-			}
+			
+			if(m[0] == 1) $('.cover').css({"background-image":"url(flashingrainbowsmall.gif)"});
+					
 		}	
 		serial++;
 	});
@@ -242,13 +238,13 @@ function generateBoard(x, y, bd, m) //x, y, bomb density, mode
 					t.flagged = !t.flagged;
 					if(t.flagged)
 					{
-						if(m == 0 || m== 2) $('#'+t.ser).css({"background-image":"url(flag.png), url(emptybox.png)"}); 
-						if(m == 1) $('#'+t.ser).css({"background-image":"url(flag.png),url(mlgcosby.gif)"});
+						if(m[0] == 0) $('#'+t.ser).css({"background-image":"url(flag.png), url(emptybox.png)"}); 
+						if(m[0] == 1) $('#'+t.ser).css({"background-image":"url(flag.png),url(mlgcosby.gif)"});
 					}
 					else
 					{
-						if(m == 0 || m== 2) $('#'+t.ser).css({"background-image":"url(emptybox.png)"});
-						if(m == 1) $('#'+t.ser).css({"background-image":"url(flashingrainbowsmall.gif)"});
+						if(m[0] == 0) $('#'+t.ser).css({"background-image":"url(emptybox.png)"});
+						if(m[0] == 1) $('#'+t.ser).css({"background-image":"url(flashingrainbowsmall.gif)"});
 					}
 				}
 			});
@@ -269,7 +265,7 @@ function clock(m) //m: mode
 		var degs = 0;
 		clockInt = setInterval(function(){
 
-			if(m == 2 && !mainMenuShowing)
+			if(m[1] == 1 && !mainMenuShowing)
 			{
 				$("#gameAndMenu").css({"-webkit-transform":"rotate("+degs+"deg)"});
 				degs++;
@@ -485,23 +481,25 @@ function sendData(a) //0:CUTSOM 1:very easy  2:easy  3:medium  4:hard  5.extreme
 	}
 
 	var modes = document.getElementsByName('mode');
-	var mode;
 	for (i = 0; i < modes.length; i++)
 	{
 		if(modes[i].checked)
 		{
-			mode = i;
+			mode[i] = 1;
+		}
+		else
+		{
+			mode[i] = 0;
 		}
 	}
 
-	switch(mode)
+	if(mode == [0,0]) //classic
 	{
-		case 0: //Classic
-			$('body').css({"background":"white"});
-			break;
-
-		case 1: //Epilepsy
-			if(!warningHasBeenPressed)
+		$('body').css({"background":"white"});
+	}
+	else if(mode[0] == 1) //epilepsy 
+	{
+		if(!warningHasBeenPressed)
 			{
 				alert("****SEVERE EPILEPSY WARNING****");
 				warningHasBeenPressed = true;
@@ -509,13 +507,19 @@ function sendData(a) //0:CUTSOM 1:very easy  2:easy  3:medium  4:hard  5.extreme
 			$('body').css({"background-image":"url(flashingrainbow.gif)"});
 			$('#keyButton').css({"background-image":"url(cosby.gif)"});
 			$('#changeLogButton').css({"background-image":"url(cosby.gif)"});
-			break;
-
-		case 2: //Laundry
-
-			break;
 	}
-////$('.cover').css({"background-image":"url(flashingrainbowsmall.gif)"});
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	mainMenuShowing = 0;
 
