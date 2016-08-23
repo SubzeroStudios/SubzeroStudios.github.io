@@ -263,9 +263,10 @@ function clock(m) //m: mode
 		var seconds = 0;
 		var tseconds = 0;
 		var degs = 0;
+		var degs2 = 0;
 		clockInt = setInterval(function(){
 
-			if(m[1] == 1 && !mainMenuShowing)
+			if(m[1] == 1 && !mainMenuShowing) /* tilefield spinning */
 			{
 				$("#gameAndMenu").css({"-webkit-transform":"rotate("+degs+"deg)"});
 				degs++;
@@ -276,9 +277,24 @@ function clock(m) //m: mode
 				}
 			}
 
+			if((m[2] == 1) && (m[0] == 1) && !mainMenuShowing) /* background spinning */
+			{
+				$("#background").css({"-webkit-transform":"rotate("+degs2+"deg)"});
+				degs2 -= 1.75;
+
+				if(degs2 <= -361)
+				{
+					degs2 = 0;
+				}
+				console.log(m[0]);
+			}
+
 			if(mainMenuShowing)
 			{
 				$("#gameAndMenu").css({"-webkit-transform":"rotate(0deg)"});
+				$("body").css({"-webkit-transform":"rotate(0deg)"});
+				$("#background").css({"-webkit-transform":"rotate(0deg)"});
+				$("#background").css({"background":"#fff"})
 			}
 
 			tiles.forEach(function(l){
@@ -493,9 +509,9 @@ function sendData(a) //0:CUTSOM 1:very easy  2:easy  3:medium  4:hard  5.extreme
 		}
 	}
 
-	if(mode == [0,0]) //classic
+	if(mode == [0,0,0]) //classic
 	{
-		$('body').css({"background":"white"});
+		$('#background').css({"background":"white"});
 	}
 	else if(mode[0] == 1) //epilepsy 
 	{
@@ -504,6 +520,7 @@ function sendData(a) //0:CUTSOM 1:very easy  2:easy  3:medium  4:hard  5.extreme
 				alert("****SEVERE EPILEPSY WARNING****");
 				warningHasBeenPressed = true;
 			}
+			$('#background').css({"background-image":"url(flashingrainbow.gif)"});
 			$('body').css({"background-image":"url(flashingrainbow.gif)"});
 			$('#keyButton').css({"background-image":"url(cosby.gif)"});
 			$('#changeLogButton').css({"background-image":"url(cosby.gif)"});
