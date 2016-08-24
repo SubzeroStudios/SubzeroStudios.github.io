@@ -12,7 +12,7 @@ body
 	 background: -o-linear-gradient(right, #26FFD0, #26FFD0); 	
 	 background: linear-gradient(right, #26FFD0, #26FFD0); 	*/
 	 /* background http://backgrounds.mysitemyway.com/background/tileable-metal-textures-4/ I DO NOT OWN THIS ALL CREDIT GOES TO RESPECTIVE OWNERS MYSITEMYWAY.COM */
-	 background: url('bgtexture2.png');
+	 background: url('stressed_linen.png');
 }
 
 body, section, aside, nav, hgroup, header, footer
@@ -60,7 +60,7 @@ body, section, aside, nav, hgroup, header, footer
 	font-size: 40px;
 	font-family: Century Gothic, Helvetica, sans serif;
 	font-weight: 500;
-	color: black;
+	color: white;
 	padding-bottom: 10px;
 }
 
@@ -84,20 +84,14 @@ body, section, aside, nav, hgroup, header, footer
 {
 	margin-top: 25px;
 	margin: 0 auto;
-	border: 2px solid black;
-	background: -webkit-linear-gradient(right, #EDEDED, white);
-	background: -moz-linear-gradient(right, #EDEDED, white);
-	background: -ms-linear-gradient(right, #EDEDED, white);
-	background: -o-linear-gradient(right, #EDEDED, white);
-	background: linear-gradient(right, #EDEDED, white);
 	height: 50px;
 	width: 250px;
-	-webkit-box-shadow: rgb(110, 110, 110) 5px 5px 10px;
+	/*-webkit-box-shadow: rgb(110, 110, 110) 5px 5px 10px;
 	-moz-box-shadow: rgb(110, 110, 110) 5px 5px 10px;
 	-ms-box-shadow: rgb(110, 110, 110) 5px 5px 10px;
 	-o-box-shadow: rgb(110, 110, 110) 5px 5px 10px;
-	box-shadow: rgb(110, 110, 110) 5px 5px 10px;
-	-webkit-border-top-right-radius: 25px;
+	box-shadow: rgb(110, 110, 110) 5px 5px 10px;*/
+	/*-webkit-border-top-right-radius: 25px;
 	-moz-border-top-right-radius: 25px;
 	-ms-border-top-right-radius: 25px;
 	-o-border-top-right-radius: 25px;
@@ -106,7 +100,7 @@ body, section, aside, nav, hgroup, header, footer
 	-moz-border-top-left-radius: 25px;
 	-ms-border-top-left-radius: 25px;
 	-o-border-top-left-radius: 25px;
-	border-top-left-radius: 25px;
+	border-top-left-radius: 25px;*/
 	-webkit-box-pack: center;
 	-moz-box-pack: center;
 	-ms-box-pack: center;
@@ -122,8 +116,8 @@ body, section, aside, nav, hgroup, header, footer
 	-o-animation: fadeIn 0.5s;
 	animation: fadeIn 0.5s;
 	padding-top: 0px;
-	font: bold 40px Century Gothic, Helvetica, sans serif;
-	color: black;
+	font: 40px Century Gothic, Helvetica, sans serif;
+	color: White;
 	text-align: center;
 }
 
@@ -160,7 +154,7 @@ body, section, aside, nav, hgroup, header, footer
 	padding: 10px;
 	text-align: justify;
 	font: 24px Century Gothic, Helvetica, sans serif;
-	color: black;
+	color: white;
 }
 
 #linksOnHome
@@ -174,7 +168,7 @@ body, section, aside, nav, hgroup, header, footer
 	padding-bottom: 10px;
 	text-align: left;
 	font: 24px Century Gothic, Helvetica, sans serif;
-	color: black;
+	color: white;
 	margin-left: 50px;
 	margin-right: 50px;
 }
@@ -193,12 +187,9 @@ body, section, aside, nav, hgroup, header, footer
 
 #top_header 
 {
-	background: url('furley_bg.png');
-	margin-top: 10px;
-	margin-left: 40px;
-	margin-right: 40px;
-	padding: 15px;
-	border: 2px solid black;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	color: white;
 	-webkit-box-flex: 1;
 	-moz-box-flex: 1;
 	-ms-box-flex: 1;
@@ -209,12 +200,12 @@ body, section, aside, nav, hgroup, header, footer
 	-ms-box-align: stretch;
 	-o-box-align: stretch;
 	box-align: stretch;
-	-webkit-box-shadow: rgb(110, 110, 110) 10px 10px 10px;
+	/*-webkit-box-shadow: rgb(110, 110, 110) 10px 10px 10px;
 	-moz-box-shadow: rgb(110, 110, 110) 10px 10px 10px;
 	-ms-box-shadow: rgb(110, 110, 110) 10px 10px 10px;
 	-o-box-shadow: rgb(110, 110, 110) 10px 10px 10px;
-	box-shadow: rgb(110, 110, 110) 10px 10px 10px;
-	font: Bold 20px Century Gothic, Helvetica, sans serif;
+	box-shadow: rgb(110, 110, 110) 10px 10px 10px;*/
+	font: 30px Century Gothic, Helvetica, sans serif;
 }
 
 #menu
@@ -228,13 +219,18 @@ nav ul li a
 	display: block;
 	text-decoration: none;
 	font: 45px Century Gothic, Helvetica, sans serif;
-	color: black;
+	color: #CCC;
 	-webkit-animation: fadeIn 0.5s;
 	-moz-animation: fadeIn 0.5s;
 	-ms-animation: fadeIn 0.5s;
 	-o-animation: fadeIn 0.5s;
 	animation: fadeIn 0.5s;
 }	
+
+nav ul li a:hover
+{
+	color: #FFF;
+}
 
 #menu ul
 {
@@ -243,19 +239,12 @@ nav ul li a
 
 #menu ul li
 {
-	background: -webkit-linear-gradient(right, #E3E3E3, white);
-	background: -moz-linear-gradient(right, #E3E3E3, white);
-	background: -ms-linear-gradient(right, #E3E3E3, white);
-	background: -o-linear-gradient(right, #E3E3E3, white);
-	background: linear-gradient(right, #E3E3E3, white);
 	text-decoration: none;
 	display: block;
 	width: 200px;
 	height: 60px;
 	line-height: 60px;
-	border: 1px solid black;
-	border-right: white;
-	-webkit-border-top-left-radius: 25px;
+	/*-webkit-border-top-left-radius: 25px;
 	-moz-border-top-left-radius: 25px;
 	-ms-border-top-left-radius: 25px;
 	-o-border-top-left-radius: 25px;
@@ -264,13 +253,13 @@ nav ul li a
 	-moz-border-bottom-left-radius: 25px;
 	-ms-border-bottom-left-radius: 25px;
 	-o-border-bottom-left-radius: 25px;
-	border-bottom-left-radius: 25px;
+	border-bottom-left-radius: 25px;*/
 	float: right;
-	-webkit-box-shadow: rgb(110, 110, 110) 0px 5px 10px;
+	/*-webkit-box-shadow: rgb(110, 110, 110) 0px 5px 10px;
 	-moz-box-shadow: rgb(110, 110, 110) 0px 5px 10px;
 	-ms-box-shadow: rgb(110, 110, 110) 0px 5px 10px;
 	-o-box-shadow: rgb(110, 110, 110) 0px 5px 10px;
-	box-shadow: rgb(110, 110, 110) 0px 5px 10px;
+	box-shadow: rgb(110, 110, 110) 0px 5px 10px;*/
 	-webkit-transition: width 0.3s;
 	-moz-transition: width 0.3s;
 	-ms-transition: width 0.3s;
@@ -280,17 +269,8 @@ nav ul li a
 
 #menu ul li:hover
 {
-	width:240px;
+	width:220px;
 }
-
-/* Styling For Text Inside Nav Bar Boxes */
-nav ul li a
-{
-	display: block;
-	text-decoration: none;
-	font: 45px Century Gothic, Helvetica, sans serif;
-	color: black;
-}	
 
 /* THE MAIN INFORMATION BOX */
 #main_section
@@ -298,9 +278,7 @@ nav ul li a
 	display: block;
 	height: 750px;
 	margin-bottom: 30px;
-	background: url('furley_bg.png');
 	padding: 15px;
-	border: 2px solid black;
 	-webkit-box-flex: 1;
 	-moz-box-flex: 1;
 	-ms-box-flex: 1;
@@ -312,12 +290,12 @@ nav ul li a
 	-ms-box-align: stretch;
 	-o-box-align: stretch;
 	-box-align: stretch;
-	-webkit-box-shadow: rgb(110, 110, 110) 10px 10px 10px;
+	/*-webkit-box-shadow: rgb(110, 110, 110) 10px 10px 10px;
 	-moz-box-shadow: rgb(110, 110, 110) 10px 10px 10px;
 	-ms-box-shadow: rgb(110, 110, 110) 10px 10px 10px;
 	-o-box-shadow: rgb(110, 110, 110) 10px 10px 10px;
-	box-shadow: rgb(110, 110, 110) 10px 10px 10px;
-	-webkit-border-bottom-right-radius: 25px;
+	box-shadow: rgb(110, 110, 110) 10px 10px 10px;*/
+	/*-webkit-border-bottom-right-radius: 25px;
 	-moz-border-bottom-right-radius: 25px;
 	-ms-border-bottom-right-radius: 25px;
 	-o-border-bottom-right-radius: 25px;
@@ -326,7 +304,7 @@ nav ul li a
 	-moz-border-bottom-left-radius: 25px;
 	-ms-border-bottom-left-radius: 25px;
 	-o-border-bottom-left-radius: 25px;
-	border-bottom-left-radius: 25px;
+	border-bottom-left-radius: 25px;*/
 	overflow-y: auto;
 }
 
@@ -356,22 +334,21 @@ nav ul li a
 	margin-top: 120px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 20px;
 	clear: both;
 	padding: 20px;
 	text-align: center;
 	height: 20px;
-	border: 1px solid black;
-	-webkit-border-radius: 10px;
+	/*-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
-	border-radius: 10px;
-	background: url('furley_bg.png');
-	-webkit-box-shadow: rgb(110, 110, 110) 10px 10px 10px ;
+	border-radius: 10px;*/
+	/*-webkit-box-shadow: rgb(110, 110, 110) 10px 10px 10px ;
 	-moz-box-shadow: rgb(110, 110, 110) 10px 10px 10px ;
 	-ms-box-shadow: rgb(110, 110, 110) 10px 10px 10px ;
 	-o-box-shadow: rgb(110, 110, 110) 10px 10px 10px ;
-	box-shadow: rgb(110, 110, 110) 10px 10px 10px ;
+	box-shadow: rgb(110, 110, 110) 10px 10px 10px ;*/
 }
 
 #videoList
@@ -390,33 +367,27 @@ nav ul li a
 	text-decoration: none;
 	list-style-type: none;
 }
-
 /* boxes */
 #videoList li a #videoInfoContainer
 {
+	opacity: 0.8;
 	margin: 15px;
 	margin-bottom: 25px;
 	padding: 5px;
 	float: left;
 	display: block;
 	width: 200px;
-	height: 300px;
-	border: 1px solid black;
-	-webkit-border-radius: 10px;
+	height: 200px;
+	/*-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
-	border-radius: 10px;
-	-webkit-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
+	border-radius: 10px;*/
+	/*-webkit-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
 	-moz-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
 	-ms-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
 	-o-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
-	box-shadow: rgb(110, 110, 110) 3px 3px 3px;
-	background: -webkit-linear-gradient(right, #E8E8E8, white);
-	background: -moz-linear-gradient(right, #E8E8E8, white);
-	background: -ms-linear-gradient(right, #E8E8E8, white);
-	background: -o-linear-gradient(right, #E8E8E8, white);
-	background: linear-gradient(right, #E8E8E8, white);
+	box-shadow: rgb(110, 110, 110) 3px 3px 3px;*/
 	-webkit-transition: height 0.3s, margin-bottom 0.3s;
 	-moz-transition: height 0.3s, margin-bottom 0.3s;
 	-ms-transition: height 0.3s, margin-bottom 0.3s;
@@ -424,16 +395,9 @@ nav ul li a
 	transition: height 0.3s, margin-bottom 0.3s;
 }
 
-/* State Of Box When Hovering */
 #videoList li a #videoInfoContainer:hover
 {
-	height: 320px;
-	margin-bottom: 5px;
-	background: -webkit-linear-gradient(right, #D8D8D8, white);
-	background: -moz-linear-gradient(right, #D8D8D8, white);
-	background: -ms-linear-gradient(right, #D8D8D8, white);
-	background: -o-linear-gradient(right, #D8D8D8, white);
-	background: linear-gradient(right, #D8D8D8, white);
+	opacity: 1;
 }
 
 /* image properties */
@@ -441,30 +405,33 @@ nav ul li a
 {
 	width: 100%;
 	height: 125px;
-	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 3px 3px 12px 1px rgba(17,17,17,1);
+	-moz-box-shadow: 3px 3px 12px 1px rgba(17,17,17,1);
+	box-shadow: 3px 3px 12px 1px rgba(17,17,17,1);
+	/*-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
-	border-radius: 10px;
-	-webkit-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
+	border-radius: 10px;*/
+	/*-webkit-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
 	-moz-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
 	-ms-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
 	-o-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
-	box-shadow: rgb(110, 110, 110) 1px 1px 1px;
+	box-shadow: rgb(110, 110, 110) 1px 1px 1px;*/
 }
 
 #videoTitle
 {
-	font: bold 18px Century Gothic, Helvetica, sans serif;
-	color: Black;
+	font: 18px Century Gothic, Helvetica, sans serif;
+	color: #EEE;
 }
 
 #videoSubtitle
 {
 	font: 12px Century Gothic, Helvetica, sans serif;
-	color: gray;
+	color: #AAA;
 }
-
+/***********************************/
 #siteList
 {
 	list-style-type: none;
@@ -481,48 +448,37 @@ nav ul li a
 	text-decoration: none;
 	list-style-type: none;
 }
-
 /* boxes */
 #siteList li a #siteInfoContainer
 {
+	opacity: 0.8;
 	margin: 15px;
+	margin-bottom: 25px;
 	padding: 5px;
 	float: left;
 	display: block;
 	width: 200px;
-	height: 300px;
-	border: 1px solid black;
-	-webkit-border-radius: 10px;
+	height: 200px;
+	/*-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
-	border-radius: 10px;
-	-webkit-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
+	border-radius: 10px;*/
+	/*-webkit-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
 	-moz-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
 	-ms-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
 	-o-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
-	box-shadow: rgb(110, 110, 110) 3px 3px 3px;
-	background: -webkit-linear-gradient(right, #E8E8E8, white);
-	background: -moz-linear-gradient(right, #E8E8E8, white);
-	background: -ms-linear-gradient(right, #E8E8E8, white);
-	background: -o-linear-gradient(right, #E8E8E8, white);
-	background: linear-gradient(right, #E8E8E8, white);
-	-webkit-transition: height 0.3s;
-	-moz-transition: height 0.3s;
-	-ms-transition: height 0.3s;
-	-o-transition: height 0.3s;
-	transition: height 0.3s;
+	box-shadow: rgb(110, 110, 110) 3px 3px 3px;*/
+	-webkit-transition: height 0.3s, margin-bottom 0.3s;
+	-moz-transition: height 0.3s, margin-bottom 0.3s;
+	-ms-transition: height 0.3s, margin-bottom 0.3s;
+	-o-transition: height 0.3s, margin-bottom 0.3s;
+	transition: height 0.3s, margin-bottom 0.3s;
 }
 
-/* State Of Box When Hovering */
 #siteList li a #siteInfoContainer:hover
 {
-	height: 320px;
-	background: -webkit-linear-gradient(right, #D8D8D8, white);
-	background: -moz-linear-gradient(right, #D8D8D8, white);
-	background: -ms-linear-gradient(right, #D8D8D8, white);
-	background: -o-linear-gradient(right, #D8D8D8, white);
-	background: linear-gradient(right, #D8D8D8, white);
+	opacity: 1;
 }
 
 /* image properties */
@@ -530,54 +486,54 @@ nav ul li a
 {
 	width: 100%;
 	height: 125px;
-	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 3px 3px 12px 1px rgba(17,17,17,1);
+	-moz-box-shadow: 3px 3px 12px 1px rgba(17,17,17,1);
+	box-shadow: 3px 3px 12px 1px rgba(17,17,17,1);
+	/*-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
-	border-radius: 10px;
-	-webkit-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
-	-webkit-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
-	-webkit-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
-	-webkit-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
-	-webkit-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
+	border-radius: 10px;*/
+	/*-webkit-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
+	-moz-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
+	-ms-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
+	-o-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
+	box-shadow: rgb(110, 110, 110) 1px 1px 1px;*/
 }
 
 #siteTitle
 {
-	font: bold 18px Century Gothic, Helvetica, sans serif;
-	color: Black;
+	font: 18px Century Gothic, Helvetica, sans serif;
+	color: #EEE;
 }
 
 #siteSubtitle
 {
 	font: 12px Century Gothic, Helvetica, sans serif;
-	color: gray;
+	color: #AAA;
 }
-
+/***************/
 #bigVideoTitle
 {
 	display: block;
 	font: bold 60px Century Gothic, Helvetica, sans serif;
 	color: Black;
-	background: -webkit-linear-gradient(right, #D8D8D8, white);
-	background: -moz-linear-gradient(right, #D8D8D8, white);
-	background: -ms-linear-gradient(right, #D8D8D8, white);
-	background: -o-linear-gradient(right, #D8D8D8, white);
-	background: linear-gradient(right, #D8D8D8, white);
-	-webkit-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
+	/*-webkit-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
 	-moz-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
 	-ms-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
 	-o-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
-	box-shadow: rgb(110, 110, 110) 5px 5px 5px;
+	box-shadow: rgb(110, 110, 110) 5px 5px 5px;*/
 	
-	-webkit-border-radius: 10px;
+	/*-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
-	border-radius: 10px;
+	border-radius: 10px;*/
 	margin: 10px auto;
 	border: 1px solid gray;
 }
+
+/****/
 
 #otherList
 {
@@ -595,48 +551,37 @@ nav ul li a
 	text-decoration: none;
 	list-style-type: none;
 }
-
 /* boxes */
 #otherList li a #otherInfoContainer
 {
+	opacity: 0.8;
 	margin: 15px;
+	margin-bottom: 25px;
 	padding: 5px;
 	float: left;
 	display: block;
 	width: 200px;
-	height: 300px;
-	border: 1px solid black;
-	-webkit-border-radius: 10px;
+	height: 200px;
+	/*-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
-	border-radius: 10px;
-	-webkit-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
+	border-radius: 10px;*/
+	/*-webkit-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
 	-moz-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
 	-ms-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
 	-o-box-shadow: rgb(110, 110, 110) 3px 3px 3px;
-	box-shadow: rgb(110, 110, 110) 3px 3px 3px;
-	background: -webkit-linear-gradient(right, #E8E8E8, white);
-	background: -moz-linear-gradient(right, #E8E8E8, white);
-	background: -ms-linear-gradient(right, #E8E8E8, white);
-	background: -o-linear-gradient(right, #E8E8E8, white);
-	background: linear-gradient(right, #E8E8E8, white);
-	-webkit-transition: height 0.3s;
-	-moz-transition: height 0.3s;
-	-ms-transition: height 0.3s;
-	-o-transition: height 0.3s;
-	transition: height 0.3s;
+	box-shadow: rgb(110, 110, 110) 3px 3px 3px;*/
+	-webkit-transition: height 0.3s, margin-bottom 0.3s;
+	-moz-transition: height 0.3s, margin-bottom 0.3s;
+	-ms-transition: height 0.3s, margin-bottom 0.3s;
+	-o-transition: height 0.3s, margin-bottom 0.3s;
+	transition: height 0.3s, margin-bottom 0.3s;
 }
 
-/* State Of Box When Hovering */
 #otherList li a #otherInfoContainer:hover
 {
-	height: 320px;
-	background: -webkit-linear-gradient(right, #D8D8D8, white);
-	background: -moz-linear-gradient(right, #D8D8D8, white);
-	background: -ms-linear-gradient(right, #D8D8D8, white);
-	background: -o-linear-gradient(right, #D8D8D8, white);
-	background: linear-gradient(right, #D8D8D8, white);
+	opacity: 1;
 }
 
 /* image properties */
@@ -644,40 +589,45 @@ nav ul li a
 {
 	width: 100%;
 	height: 125px;
-	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 3px 3px 12px 1px rgba(17,17,17,1);
+	-moz-box-shadow: 3px 3px 12px 1px rgba(17,17,17,1);
+	box-shadow: 3px 3px 12px 1px rgba(17,17,17,1);
+	/*-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
-	border-radius: 10px;
-	-webkit-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
-	-webkit-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
-	-webkit-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
-	-webkit-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
-	-webkit-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
+	border-radius: 10px;*/
+	/*-webkit-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
+	-moz-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
+	-ms-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
+	-o-box-shadow: rgb(110, 110, 110) 1px 1px 1px;
+	box-shadow: rgb(110, 110, 110) 1px 1px 1px;*/
 }
 
 #otherTitle
 {
-	font: bold 18px Century Gothic, Helvetica, sans serif;
-	color: Black;
+	font: 18px Century Gothic, Helvetica, sans serif;
+	color: #EEE;
 }
 
 #otherSubtitle
 {
 	font: 12px Century Gothic, Helvetica, sans serif;
-	color: gray;
+	color: #AAA;
 }
+
+/*********/
 
 #video
 {
 	margin: 40px auto;
 	width: 640px;
 	height: 360px;
-	-webkit-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
+	/*-webkit-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
 	-moz-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
 	-ms-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
 	-o-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
-	box-shadow: rgb(110, 110, 110) 5px 5px 5px;
+	box-shadow: rgb(110, 110, 110) 5px 5px 5px;*/
 }
 
 #unableToSeeVideoA
@@ -688,25 +638,20 @@ nav ul li a
 	height: 50px;
 	font: bold 24px Century Gothic, Helvetica, sans serif;
 	color: Black;
-	background: -webkit-linear-gradient(right, #D8D8D8, white);
-	background: -moz-linear-gradient(right, #D8D8D8, white);
-	background: -ms-linear-gradient(right, #D8D8D8, white);
-	background: -o-linear-gradient(right, #D8D8D8, white);
-	background: linear-gradient(right, #D8D8D8, white);
-	-webkit-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
+	/*-webkit-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
+	-moz-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
+	-ms-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
+	-o-box-shadow: rgb(110, 110, 110) 5px 5px 5px;*/
+	/*-webkit-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
 	-moz-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
 	-ms-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
 	-o-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
-	-webkit-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
-	-moz-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
-	-ms-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
-	-o-box-shadow: rgb(110, 110, 110) 5px 5px 5px;
-	box-shadow: rgb(110, 110, 110) 5px 5px 5px;
-	-webkit-border-radius: 10px;
+	box-shadow: rgb(110, 110, 110) 5px 5px 5px;*/
+	/*-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
 	-o-border-radius: 10px;
-	border-radius: 10px;
+	border-radius: 10px;*/
 	margin: 10px auto;
 	opacity: 1;
 }
