@@ -134,6 +134,10 @@ body
 	font: 0px Century Gothic; /*35*/
 	overflow: hidden;
 }
+.cover
+{
+	cursor: pointer;
+}
 #gameAndMenu
 {
 	position: relative;

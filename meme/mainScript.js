@@ -76,7 +76,7 @@ function generateBoard(x, y, bd, m) //x, y, bomb density, mode
 				$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(explosion.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
 			}
 
-			$('<div id="'+serial+'" class="cover" style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#f00;text-align:center;background-image:url(emptybox.png);cursor:pointer;" onclick='+"showTile('bomb', '"+serial+"')"+'></div>').appendTo('#gameContainer');
+			$('<div id="'+serial+'" class="cover" style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#f00;text-align:center;background-image:url(emptybox.png);" onclick='+"showTile('bomb', '"+serial+"')"+'></div>').appendTo('#gameContainer');
 		}
 		/* number or empty space */
 		else
@@ -193,7 +193,7 @@ function generateBoard(x, y, bd, m) //x, y, bomb density, mode
 							$('<div style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#fff;text-align:center;background-image:url(pepe.gif), url(mlgcosby.gif);">'+number+'</div>').appendTo('#gameContainer');
 						}
 			}
-			$('<div id="'+serial+'" class="cover" style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#f00;text-align:center;background-image:url(emptybox.png);cursor:pointer;" onclick='+"showTile('bomb', '"+serial+"')"+'></div>').appendTo('#gameContainer');
+			$('<div id="'+serial+'" class="cover" style="width:'+tileWidth+'px;height:'+tileWidth+'px;background-color:black;position:absolute;top:'+t.y+'px;left:'+t.x+'px;color:#f00;text-align:center;background-image:url(emptybox.png);" onclick='+"showTile('bomb', '"+serial+"')"+'></div>').appendTo('#gameContainer');
 
 			
 			if(m[0] == 1) $('.cover').css({"background-image":"url(flashingrainbowsmall.gif)"});
@@ -201,6 +201,19 @@ function generateBoard(x, y, bd, m) //x, y, bomb density, mode
 		}	
 		serial++;
 	});
+
+	if(m[3] == 0) //cursor 
+	{
+		$(".cursor").css({"cursor":"pointer"});
+		$("#gameContainer div").css({"cursor":"pointer"});
+		console.log("cursor");
+	}
+	else if(m[3] == 1) //blind
+	{
+		$(".cursor").css({"cursor":"none"});
+		$("#gameContainer div").css({"cursor":"none"});
+		console.log("blind");
+	}
 
 	$('.cover').mousedown(function(e){
 		var left = $(this).css("left");
@@ -525,8 +538,6 @@ function sendData(a) //0:CUTSOM 1:very easy  2:easy  3:medium  4:hard  5.extreme
 			$('#keyButton').css({"background-image":"url(cosby.gif)"});
 			$('#changeLogButton').css({"background-image":"url(cosby.gif)"});
 	}
-
-
 
 
 
