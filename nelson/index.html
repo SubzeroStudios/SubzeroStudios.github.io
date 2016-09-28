@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Something dank this way comes...</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<style>
+			ul li{
+				list-style-type: none;
+				font-size: 5px;
+				font-family: Comic Sans MS;
+				color: white;
+				text-align: center;
+				width: 100vw;
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<ul id="kek">
+			<script>
+				var text1 = "You wouldn't want a centidollar now would you?";
+				var text2 = "How about a millibuck? Wouldn't want that either!";
+			
+				for(i =0; i <= 690; i++)
+				{
+					if(i%2) $("#kek").append("<li class='djent'>"+text1+"</li>");
+					else $("#kek").append("<li class='djent'>"+text2+"</li>");
+				}
+				
+				/*$("#kek ").on("mouseover" function(e){
+					$(this).animate({"font-size":"69px"},100);
+				})*/
+				
+				$("#kek .djent").mouseover(function(){
+					$(this).css({"color":"black"});
+					$(this).animate({"font-size":"49px"}, 1000, 
+						function()
+						{
+							$(this).animate({"font-size":"5px"}, 1000, 		
+								function()
+								{
+									$(this).css({"color":"white"});
+								}
+							);
+						}
+					);
+				});
+			</script>
+		</ul>
+	</body>
+</html>
