@@ -8,7 +8,8 @@
 				list-style-type: none;
 				font-size: 15px;
 				font-family: Comic Sans MS;
-				color: white;
+				color: black;
+				opacity: 0;
 				text-align: center;
 				width: 100vw;
 			}
@@ -33,16 +34,10 @@
 				})*/
 				
 				$("#kek .djent").mouseover(function(){
-					$(this).css({"color":"black"});
-					$(this).animate({"font-size":"49px"}, 1000, 
+					$(this).animate({"font-size":"49px","opacity":"1"}, 1000, 
 						function()
 						{
-							$(this).animate({"font-size":"15px"}, 1000, 		
-								function()
-								{
-									$(this).css({"color":"white"});
-								}
-							);
+							$(this).animate({"font-size":"15px","opacity":"0"}, 1000);
 						}
 					);
 				});
