@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Calclating Pi</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="script.js"></script>
+		<style>
+			.approach
+			{
+				display: inline-block;
+			}
+			.scrollbox
+			{
+				overflow-y: scroll;
+				width: 350px;
+				height: 300px;
+				outline: 1px solid #ddd;
+				resize: vertical;
+				font-family: Courier New;
+				text-align: center;
+			}
+			#scrollbox table tr
+			{
+
+			}
+			.scrollbox table tr:nth-child(even) {
+   				background-color: #eee;
+			}
+			.scrollbox table th
+			{
+				font-size: 0;
+			}
+			#scrollbox table td
+			{
+				text-align: center;
+			}
+			canvas
+			{
+				width: 350px;
+				height: 200px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="approach">
+			Leibniz Series
+
+			<br/>
+			<input id="userInput1" type="number"></input>
+			<button onclick="calculate1()">Begin Calculation</button>
+			<br/>
+			<div id="pi1">x.xxxxxxxxxxxxxxxx</div>
+			<br/>
+			<div class="scrollbox" id="scrollbox1">
+				<table>
+					<tr>
+						<th>Cycle</th>
+						<th>Frac</th>
+						<th>Current Approx</th>
+					</tr>
+				</table>
+			</div>
+			<canvas id="leibniz">
+
+			</canvas>
+		</div>
+
+		<div class="approach">
+			Euler's approach
+
+			<br/>
+			<input id="userInput2" type="number"></input>
+			<button onclick="calculate2()">Begin Calculation</button>
+			<br/>
+			<div id="pi2">x.xxxxxxxxxxxxxxxx</div>
+			<br/>
+			<div class="scrollbox" id="scrollbox2">
+				<table>
+					<tr>
+						<th>Cycle</th>
+						<th>Frac</th>
+						<th>Current Approx</th>
+					</tr>
+				</table>
+			</div>
+			<canvas id="euler">
+
+			</canvas>
+		</div>
+	</body>
+</html>
