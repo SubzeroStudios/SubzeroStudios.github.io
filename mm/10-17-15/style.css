@@ -1,0 +1,194 @@
+canvas
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: transparent;
+}
+
+#gameConatiner
+{
+	width: 720px;
+	height: 480px;
+	margin: 0px auto;
+	display: block;
+	position: relative;
+	background-image: url(images/greenbackdrop.png);
+}
+
+#popupMessageContainer
+{
+	width: 720px;
+	height: 480px;
+	margin: -480px auto;
+	display: relative;
+	opacity: 1;
+
+}
+
+#popupContainer2
+{
+	width: 610px;
+	height: 480px;
+	opacity: 1;
+	float: right;
+	position: relative;
+}
+
+#popup
+{
+	height: 50px;
+	font: 25px Century Gothic;
+	width: 430px;
+	font-weight: bold;
+	color: white;
+	display: block;
+	margin: 140px auto;
+	background-color: #00B000;
+	border: 8px solid #FFD138;
+	position: relative;
+	text-align: center;
+}
+
+#icon
+{
+	width: 33px;
+	height: 37px;
+	margin: 5px;
+	position: absolute;
+}
+
+#text
+{
+	display: inline-block;
+	margin-top: 10px;
+}
+
+#messageBoardTop
+{
+	text-align: center;
+	color: white;
+	font: 30px Century Gothic;
+	margin: 5px;
+}
+
+#o
+{
+	margin-left: 135px;
+}
+
+.monkey
+{
+	width: 80px;
+	height: 80px;
+	margin: 5px;
+	margin-bottom: 0px;
+	display: inline-block;
+}
+
+#dealer
+{
+	position: absolute;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 15px;
+	height: 200px;
+	width: 100px;
+}
+
+#a0box
+{
+	margin-left: 135px;
+}
+
+.monkeyBoxesContainer
+{
+	margin: 4px;
+	width: 82px;
+	height: 82px;
+	display: inline-block;
+}
+
+.subBox
+{
+	width: 39px;
+	height: 39px;
+	margin-right: -1px;
+	margin-bottom: -1px;
+	display: inline-block;
+	background-image: url(images/subboxbackrop.png);
+}
+
+#Obay
+{
+	margin-left: 135px;
+}
+
+.cardBayTop
+{
+	width: 80px;
+	height: 106px;
+	margin: 5px;
+	display: inline-block;
+	background-image: url(images/subboxbackrop.png);
+}
+
+#scoreBoard
+{
+	position: absolute;
+	top: 275px;
+	margin-left: 10px;
+	margin-right: 15px;
+	height: 165px;
+	width: 100px;
+	padding: 0px;
+	background-image: url(images/subboxbackrop.png);
+}
+
+#scoreText
+{
+	font: 25px Century Gothic;
+	color: white;
+	text-align: center;
+}
+
+
+.scoreBoxes
+{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	margin: 0px;
+	margin-bottom: -5px;
+	color: white;
+	line-height: 40px;
+	font: 25px Century Gothic;
+	text-align: center;
+}
+
+
+#deckContainer
+{
+	width: 458px;
+	height: 106px;
+	margin-top: 8px;
+	margin-left: 180px;
+	overflow: hidden;
+	padding: 5px;
+	padding-left: 13px;
+	background-image: url(images/deckcontainerbackground.png);
+	background-color: white;
+}
+
+.cardBayBottom
+{
+	background-image: url(images/subboxbackrop.png);
+	width: 80px;
+	margin-right: 8px;
+	margin-bottom: 6px;
+	height: 106px; /* 106 */
+	display: inline-block;
+	/*-webkit-box-shadow: inset 5px 5px 22px -1px rgba(255,255,255,1);
+	-moz-box-shadow: inset 5px 5px 22px -1px rgba(255,255,255,1);
+	box-shadow: inset 5px 5px 22px -1px rgba(255,255,255,1);*/
+}

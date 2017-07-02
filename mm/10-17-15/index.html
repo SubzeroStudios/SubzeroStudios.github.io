@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Moogoo Monkey</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="jquery.js"></script>
+	</head>
+	
+	<body>
+		<div id="gameConatiner">
+
+			<div id="messageBoardTop">Place a bet</div>
+
+			<img id="dealer" src="images/dealer.png">
+			</img>
+			<div class="monkey" id="o" style="background-image:url(images/orangem.png);">
+			</div>
+			<div class="monkey" id="b" style="background-image:url(images/bluem.png);">
+			</div>
+			<div class="monkey" id="g" style="background-image:url(images/greenm.png);">
+			</div>
+			<div class="monkey" id="p" style="background-image:url(images/purplem.png);">
+			</div>
+			<div class="monkey" id="r" style="background-image:url(images/redm.png);">
+			</div>
+			<div class="monkey" id="s" style="background-image:url(images/silverm.png);">
+			</div>
+
+			<!--
+				<div class="monkey" id="o" stlye="background-image:url(images/orangem.png);">
+				</div>
+				<div class="monkey" id="b" stlye="background-image:url(images/bluem.png);">
+				</div>
+				<div class="monkey" id="g" stlye="background-image:url(images/greenm.png);">
+				</div>
+				<div class="monkey" id="p" stlye="background-image:url(images/purplem.png);"
+				</div>
+				<div class="monkey" id="r" stlye="background-image:url(images/redm.png);">
+				</div>
+				<div class="monkey" id="s" stlye="background-image:url(images/silverm.png);">
+				</div>
+			-->
+
+			<div class="monkeyBoxesContainer" id="a0box">
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+			</div>
+			<div class="monkeyBoxesContainer" id="a1box">
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+			</div>
+			<div class="monkeyBoxesContainer" id="a2box">
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+			</div>
+			<div class="monkeyBoxesContainer" id="a3box">
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+			</div>
+			<div class="monkeyBoxesContainer" id="a4box">
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+			</div>
+			<div class="monkeyBoxesContainer" id="a5box">
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+				<div class="subBox"></div>
+			</div>
+
+			<div id="cardBayTopContainer">
+				<div class="cardBayTop" id="Obay"></div>
+				<div class="cardBayTop" id="Bbay"></div>
+				<div class="cardBayTop" id="Gbay"></div>
+				<div class="cardBayTop" id="Pbay"></div>
+				<div class="cardBayTop" id="Rbay"></div>
+				<div class="cardBayTop" id="Sbay"></div>
+			</div>
+
+			<div id="scoreBoard">
+				<div id="scoreText">Score</div>
+				<img class="scoreBoxes" src="images/coconut.png"></img> 
+				<div id="cscorebox" class="scoreBoxes"></div> 
+				<img class="scoreBoxes" src="images/watermellon.png"></img> 
+				<div id="wscorebox" class="scoreBoxes"></div> 
+				<img class="scoreBoxes" src="images/pineapple.png"></img> 
+				<div id="pscorebox" class="scoreBoxes"></div> 
+			</div>
+
+			<div id="deckContainer">
+				<div class="cardBayBottom" id="b1"></div>
+				<div class="cardBayBottom" id="b2"></div>
+				<div class="cardBayBottom" id="b3"></div>
+				<div class="cardBayBottom" id="b4"></div>
+				<div class="cardBayBottom" id="b5"></div>
+			</div>
+
+		</div>
+
+		<div id="popupMessageContainer">
+			<div id="popupContainer2">
+				<div id="popup">
+					<div id="icon"></div>
+					<div id="text"></div>
+				</div>
+			</div>
+		</div>
+		<script>
+			//$('#popupMessageContainer').hide();
+		</script>
+		<script src="script.js"></script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
